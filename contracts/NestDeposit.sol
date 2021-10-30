@@ -33,9 +33,72 @@ interface CEth {
     function redeemUnderlying(uint) external returns (uint);
 }
 
-
 contract NestDeposit {
+
+    struct Deposit {
+        uint256 amount;
+        uint256 rate;
+        uint256 blockNumber;
+    }
+
+    struct Token {
+        Deposit[] deposits;
+    }
+
+    struct Account {
+        mapping(address => Token) tokens;
+    }
+
+    mapping(address => Account) internal accounts;
+
     event MyLog(string, uint256);
+
+    event DepositMade(address pool, address from, uint256 amount);
+
+    event WithdrawalMade(address pool, address to, uint256 amount);
+
+    mapping(address => uint256) internal poolBalance;
+
+    function depositErc20(
+        address _erc20Contract,
+        address _cErc20Contract,
+        uint256 _numTokensToSupply
+    ) public returns (bool) {
+        // Create a reference to the underlying asset contract, like DAI.
+        Erc20 underlying = Erc20(_erc20Contract);
+
+        // Create a reference to the corresponding cToken contract, like cDAI
+        CErc20 cToken = CErc20(_cErc20Contract);
+
+        // Amount of current exchange rate from cToken to underlying
+        uint256 exchangeRateMantissa = cToken.exchangeRateCurrent();
+        emit MyLog("Exchange Rate (scaled up): ", exchangeRateMantissa);
+
+        // Amount added to your supply balance this block
+        uint256 supplyRateMantissa = cToken.supplyRatePerBlock();
+        emit MyLog("Supply Rate: (scaled up)", supplyRateMantissa);
+
+        // Approve transfer on the ERC20 contract
+        underlying.approve(address(this), _numTokensToSupply);
+
+        // Collect tokens
+        bool transferred = underlying.transfer(address(this), _numTokensToSupply);
+
+        // Get user account
+        Account storage account = accounts[msg.sender];
+
+        // Save deposit
+        Token storage token = account.tokens[_erc20Contract];
+
+        // Update pool balance
+        poolBalance[_erc20Contract] += _numTokensToSupply;
+
+        token.deposits.push(Deposit(_numTokensToSupply, exchangeRateMantissa, block.number));
+
+        emit DepositMade(_erc20Contract, msg.sender,  _numTokensToSupply);
+
+        return transferred;
+    }
 
     function supplyEthToCompound(address payable _cEtherContract)
         public
@@ -61,7 +124,7 @@ contract NestDeposit {
         address _erc20Contract,
         address _cErc20Contract,
         uint256 _numTokensToSupply
-    ) public returns (uint) {
+    ) internal returns (uint) {
         // Create a reference to the underlying asset contract, like DAI.
         Erc20 underlying = Erc20(_erc20Contract);
 
@@ -84,11 +147,11 @@ contract NestDeposit {
         return mintResult;
     }
 
-    function redeemCErc20Tokens(
+    function redeemCErc20TokensFromCompount(
         uint256 amount,
         bool redeemType,
         address _cErc20Contract
-    ) public returns (bool) {
+    ) internal returns (bool) {
         // Create a reference to the corresponding cToken contract, like cDAI
         CErc20 cToken = CErc20(_cErc20Contract);
 
@@ -112,11 +175,11 @@ contract NestDeposit {
         return true;
     }
 
-    function redeemCEth(
+    function redeemCEthFromCompound(
         uint256 amount,
         bool redeemType,
         address _cEtherContract
-    ) public returns (bool) {
+    ) internal returns (bool) {
         // Create a reference to the corresponding cToken contract
         CEth cToken = CEth(_cEtherContract);
 
