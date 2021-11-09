@@ -41,9 +41,22 @@ class Deposit extends Component {
   execute = async () => {
     const { accounts, contract } = this.state;
     this.state.deposits.filter((d) => d.value > 0).forEach((dep) => {
-        contract.methods.supplyErc20ToCompound(
+        contract.methods.depositErc20(
           dep.address.ercAddress,
           dep.address.address,
+          dep.value)
+          .send({from: accounts[0]});
+          console.log(dep.address.name);
+    });
+
+  };
+
+
+  withdraw = async () => {
+    const { accounts, contract } = this.state;
+    this.state.deposits.filter((d) => d.value > 0).forEach((dep) => {
+        contract.methods.supplyErc20ToCompound(
+          dep.address.ercAddress,
           dep.value)
           .send({from: accounts[0]});
           console.log(dep.address.name);
@@ -108,6 +121,8 @@ class Deposit extends Component {
         }
         <br/>
         <div onClick={this.execute} className="f6 link dim br1 ph3 pv2 mb2 dib white bg-near-black" href="#0">Deposit</div>
+        <div onClick={this.withdraw} className="f6 link dim br1 ph3 pv2 mb2 dib white bg-near-black" href="#0">Withdraw</div>
+
       </div>
 
           </div>

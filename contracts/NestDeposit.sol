@@ -1,6 +1,4 @@
 pragma solidity >=0.4.22 <0.9.0;
-
-
 interface Erc20 {
     function approve(address, uint256) external returns (bool);
 
@@ -8,8 +6,6 @@ interface Erc20 {
 
     function transferFrom(address, address, uint256) external returns (bool);
 }
-
-
 interface CErc20 {
     function mint(uint256) external returns (uint256);
 
@@ -23,8 +19,6 @@ interface CErc20 {
 
     function transfer(address, uint256) external returns (bool);
 }
-
-
 interface CEth {
     function mint() external payable;
 
@@ -38,14 +32,13 @@ interface CEth {
 }
 
 interface IRecursive {
-    function checkReserve(
+    function updateReserve(
         address _erc20Contract,
         address _cErc20Contract) external returns (bool);
 
     function fillReserve(
             address _erc20Contract,
-            address _cErc20Contract,
-            uint256 amount) external returns (bool)
+            uint256 amount) external returns (bool);
 }
 
 contract NestDeposit is IRecursive {
@@ -53,6 +46,8 @@ contract NestDeposit is IRecursive {
     struct Pool {
         uint256 balance;
         uint256 reserve;
+        uint256 performanceFee;
+        uint256 managementFee;
     }
 
     struct Token {
@@ -65,17 +60,32 @@ contract NestDeposit is IRecursive {
 
     mapping(address => Account) internal accounts;
 
+    mapping(address => Pool) internal pools;
+
+    mapping(address => address) internal marketPairs;
+
     event MyLog(string, uint256);
 
     event DepositMade(address pool, address cerc20, address from, uint256 amount);
 
     event WithdrawalMade(address pool, address cerc20, address to, uint256 amount);
 
-    mapping(address => Pool) internal pools;
+    function setPoolReserveMin(address _erc20Contract, uint256 amount) external returns(bool){
+        Pool storage pool = pools[_erc20Contract];
+        pool.reserve = amount;
+        return true;
+    }
 
-    function checkReserve(
+    function getPoolReserveMin(address _erc20Contract) external view returns(uint256){
+        return pools[_erc20Contract].reserve;
+    }
+
+    function updateReserve(
         address _erc20Contract,
-        address _cErc20Contract) external returns (bool) {
+        address _cErc20Contract) external override returns (bool) {
+
+        // Create a reference to the underlying asset contract, like DAI.
+        Erc20 underlying = Erc20(_erc20Contract);
 
         // Create a reference to the corresponding cToken contract, like cDAI
         CErc20 cToken = CErc20(_cErc20Contract);
@@ -83,7 +93,12 @@ contract NestDeposit is IRecursive {
         // Update pool balance
         Pool storage pool = pools[_erc20Contract];
         if(pool.balance > pool.reserve ) {
-            cToken.mint(( pool.balance - pool.reserve));
+            uint256 amount = pool.balance - pool.reserve;
+            underlying.approve(_cErc20Contract, amount);
+            cToken.mint((amount));
+
+            // Save valid Erc20 to cErc20 pair
+            marketPairs[_erc20Contract] = _cErc20Contract;
         }
 
         return true;
@@ -91,8 +106,10 @@ contract NestDeposit is IRecursive {
 
        function fillReserve(
             address _erc20Contract,
-            address _cErc20Contract,
-            uint256 amount) external returns (bool) {
+            uint256 amount) external override returns (bool) {
+
+        // Get valid cERC20 address from previous succesful deposit
+        address _cErc20Contract = marketPairs[_erc20Contract];
 
         // Create a reference to the corresponding cToken contract, like cDAI
         CErc20 cToken = CErc20(_cErc20Contract);
@@ -143,7 +160,7 @@ contract NestDeposit is IRecursive {
         token.balance += mintResult;
 
         // Check if we should mint
-        IRecursive(address(this)).checkReserve(_erc20Contract, _cErc20Contract);
+        IRecursive(address(this)).updateReserve(_erc20Contract, _cErc20Contract);
 
         return mintResult;
     }
@@ -151,9 +168,11 @@ contract NestDeposit is IRecursive {
 
     function withdrawErc20Tokens(
         uint256 amount,
-        address _erc20Contract,
-        address _cErc20Contract
+        address _erc20Contract
     ) internal returns (bool) {
+        // Get valid cERC20 address from previous succesful deposit
+        address _cErc20Contract = marketPairs[_erc20Contract];
+
         // Create a reference to the underlying asset contract, like DAI.
         Erc20 underlying = Erc20(_erc20Contract);
 
@@ -177,7 +196,7 @@ contract NestDeposit is IRecursive {
 
         if(pool.reserve < amount) {
             // Redeem underlying
-            IRecursive(address(this)).fillReserve(_erc20Contract, _cErc20Contract, amount);
+            IRecursive(address(this)).fillReserve(_erc20Contract, amount);
         }
 
         underlying.transferFrom(address(this), msg.sender, amount);
