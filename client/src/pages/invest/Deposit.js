@@ -39,15 +39,15 @@ class Deposit extends Component {
     }
   };
 
-  sendEther = (address, amount) => {
+  sendEther = async(address, amount) => {
     const { accounts, contract } = this.state;
-    contract.methods.transferEther(address).send({from: accounts[0],  value: amount});
+    await contract.methods.transferEther(address).send({from: accounts[0],  value: amount});
   }
 
   execute = async () => {
     const { accounts, contract } = this.state;
-    this.state.deposits.filter((d) => d.value > 0).forEach((dep) => {
-        contract.methods.depositErc20(
+    this.state.deposits.filter((d) => d.value > 0).forEach(async(dep) => {
+        await contract.methods.depositErc20(
           dep.address.ercAddress,
           dep.address.address,
           dep.value)
@@ -60,8 +60,8 @@ class Deposit extends Component {
 
   withdraw = async () => {
     const { accounts, contract } = this.state;
-    this.state.deposits.filter((d) => d.value > 0).forEach((dep) => {
-        contract.methods.withdrawErc20Tokens(
+    this.state.deposits.filter((d) => d.value > 0).forEach(async(dep) => {
+        await contract.methods.withdrawErc20Tokens(
           dep.address.ercAddress,
           dep.value)
           .send({from: accounts[0]});
