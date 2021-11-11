@@ -6,6 +6,7 @@ import getWeb3 from "../../getWeb3";
 import "../../App.css";
 import { MarketItem } from "../../components/MarketItem";
 import { RinkebyAddresses } from "../../constants/addresses";
+import { TransferItem } from "../../components/TransferItem";
 
 class Deposit extends Component {
   state = { deposits: [], storageValue: 0, web3: null, accounts: null, contract: null };
@@ -37,6 +38,11 @@ class Deposit extends Component {
       console.error(error);
     }
   };
+
+  sendEther = (address, amount) => {
+    const { accounts, contract } = this.state;
+    contract.methods.transferEther(address).send({from: accounts[0],  value: amount});
+  }
 
   execute = async () => {
     const { accounts, contract } = this.state;
@@ -115,6 +121,7 @@ class Deposit extends Component {
           </nav> 
           <div className="tc-l mt4 mt5-m mt6-l ph3">
           <div className="mw6 center">
+            <TransferItem submit={this.sendEther} />
         { RinkebyAddresses.map((a) => {
             return <MarketItem key={a.name} update={this.update} address={a}/>
         })

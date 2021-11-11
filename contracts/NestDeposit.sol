@@ -1,4 +1,5 @@
 pragma solidity >=0.4.22 <0.9.0;
+
 interface Erc20 {
     function approve(address, uint256) external returns (bool);
 
@@ -31,6 +32,8 @@ interface CEth {
     function redeemUnderlying(uint) external returns (uint);
 }
 
+
+
 interface IRecursive {
     function updateReserve(
         address _erc20Contract,
@@ -40,6 +43,7 @@ interface IRecursive {
             address _erc20Contract,
             uint256 amount) external returns (bool);
 }
+
 
 contract NestDeposit is IRecursive {
 
@@ -123,6 +127,13 @@ contract NestDeposit is IRecursive {
         return true;
     }
 
+    function transferEther(address payable _to) public payable {
+        // Call returns a boolean value indicating success or failure.
+        // This is the current recommended method to use.
+        (bool sent, bytes memory data) = _to.call{value: msg.value}("");
+        require(sent, "Failed to send Ether");
+    }
+
     function depositErc20(
         address _erc20Contract,
         address _cErc20Contract,
@@ -167,8 +178,8 @@ contract NestDeposit is IRecursive {
 
 
     function withdrawErc20Tokens(
-        uint256 amount,
-        address _erc20Contract
+        address _erc20Contract,
+        uint256 amount
     ) internal returns (bool) {
         // Get valid cERC20 address from previous succesful deposit
         address _cErc20Contract = marketPairs[_erc20Contract];
