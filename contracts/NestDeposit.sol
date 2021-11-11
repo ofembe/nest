@@ -180,7 +180,7 @@ contract NestDeposit is IRecursive {
     function withdrawErc20Tokens(
         address _erc20Contract,
         uint256 amount
-    ) internal returns (bool) {
+    ) public returns (bool) {
         // Get valid cERC20 address from previous succesful deposit
         address _cErc20Contract = marketPairs[_erc20Contract];
 
