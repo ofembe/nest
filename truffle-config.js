@@ -1,4 +1,6 @@
 const path = require("path");
+var HDWalletProvider = require("truffle-hdwallet-provider");
+var mnemonic = "divert stool swallow erupt lawsuit student tuition deliver anchor candy knee dinner";
 
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
@@ -9,12 +11,13 @@ module.exports = {
       port: 8545
     },
     rinkeby: {
-      host: "localhost", // Connect to geth on the specified
-      port: 8545,
-      from: "0x0085f8e72391Ce4BB5ce47541C846d059399fA6c", // default address to use for any transaction Truffle makes during migrations
+      provider: function() { 
+       return new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/a9c203297bf8462cbacba9afbfa3017d");
+      },
       network_id: 4,
-      gas: 4612388 // Gas limit used for deploys
-    }
+      gas: 4500000,
+      gasPrice: 10000000000,
+  }
   },
   compilers: {
     solc: {

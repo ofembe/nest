@@ -7,6 +7,7 @@ export const TransferItem = ({submit}) => {
     
     const send = (e) => {
         submit(address, value);
+        setValue(0);
     }
 
 

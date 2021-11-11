@@ -61,7 +61,7 @@ class Deposit extends Component {
   withdraw = async () => {
     const { accounts, contract } = this.state;
     this.state.deposits.filter((d) => d.value > 0).forEach((dep) => {
-        contract.methods.supplyErc20ToCompound(
+        contract.methods.withdrawErc20Tokens(
           dep.address.ercAddress,
           dep.value)
           .send({from: accounts[0]});
@@ -70,16 +70,7 @@ class Deposit extends Component {
 
   };
 
-  ethToComp = async () => {
-    const { accounts, contract } = this.state;
-
-      const value = Web3.utils.toWei("1", "ether");
-      contract.methods.supplyEthToCompound(accounts[0]).send({from: accounts[0], value: 1});
-  };
-
   update = (address, value) => {
-    const { accounts, contract } = this.state;
-
     const deposit = this.state.deposits.find((dep) => dep.address.address === address.address);
     if(deposit) {
       const newDeps = this.state.deposits.map((d) => {
