@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Web3 from "web3";
+import {utils} from "web3";
 import NestDeposit from "../../contracts/NestDeposit.json";
 import getWeb3 from "../../getWeb3";
 
@@ -40,8 +40,9 @@ class Deposit extends Component {
   };
 
   sendEther = async(address, amount) => {
-    const { accounts, contract } = this.state;
-    await contract.methods.transferEther(address).send({from: accounts[0],  value: amount});
+    const { accounts, web3 } = this.state;
+    const amountToSend = utils.toWei(amount, "ether"); // Convert to wei value
+    await web3.eth.sendTransaction({ from: accounts[0], to:address, value: amountToSend });
   }
 
   execute = async () => {
