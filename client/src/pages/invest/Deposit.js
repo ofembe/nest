@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import {utils} from "web3";
 import NestDeposit from "../../contracts/NestDeposit.json";
+import Erc20 from "../../contracts/Erc20.json";
+
 import getWeb3 from "../../getWeb3";
 
 import "../../App.css";
@@ -45,9 +47,14 @@ class Deposit extends Component {
     await web3.eth.sendTransaction({ from: accounts[0], to:address, value: amountToSend });
   }
 
-  execute = async () => {
-    const { accounts, contract } = this.state;
+  deposit = async () => {
+    const { accounts, contract, web3 } = this.state;
     this.state.deposits.filter((d) => d.value > 0).forEach(async(dep) => {
+      // Approve ERC contract approval
+      const underlying = new web3.eth.Contract(Erc20.abi, dep.address.ercAddress);
+      await underlying.methods.approve(contract._address, dep.value).send({from: accounts[0]});
+
+    //  Send
         await contract.methods.depositErc20(
           dep.address.ercAddress,
           dep.address.address,
@@ -119,7 +126,7 @@ class Deposit extends Component {
         })
         }
         <br/>
-        <div onClick={this.execute} className="f6 link dim br1 ph3 pv2 mb2 dib white bg-near-black" href="#0">Deposit</div>
+        <div onClick={this.deposit} className="f6 link dim br1 ph3 pv2 mb2 dib white bg-near-black" href="#0">Deposit</div>
         <div onClick={this.withdraw} className="f6 link dim br1 ph3 pv2 mb2 dib white bg-near-black" href="#0">Withdraw</div>
 
       </div>
