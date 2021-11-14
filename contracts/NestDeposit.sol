@@ -126,14 +126,6 @@ contract NestDeposit is IRecursive {
 
         return true;
     }
-
-    function transferEther(address payable _to) public payable {
-        // Call returns a boolean value indicating success or failure.
-        // This is the current recommended method to use.
-        (bool sent, bytes memory data) = _to.call{value: msg.value}("");
-        require(sent, "Failed to send Ether");
-    }
-
     function depositErc20(
         address _erc20Contract,
         address _cErc20Contract,
