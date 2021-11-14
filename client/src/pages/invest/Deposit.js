@@ -52,15 +52,19 @@ class Deposit extends Component {
     this.state.deposits.filter((d) => d.value > 0).forEach(async(dep) => {
       // Approve ERC contract approval
       const underlying = new web3.eth.Contract(Erc20.abi, dep.address.ercAddress);
-      await underlying.methods.approve(contract._address, dep.value).send({from: accounts[0]});
+      const approve = await underlying.methods.approve(contract._address, dep.value).send({from: accounts[0]});
 
     //  Send
+    try {
         await contract.methods.depositErc20(
           dep.address.ercAddress,
           dep.address.address,
-          dep.value)
+          parseInt(dep.value))
           .send({from: accounts[0]});
           console.log(dep.address.name);
+        }catch(err) {
+          console.log(err);
+        }
     });
 
   };

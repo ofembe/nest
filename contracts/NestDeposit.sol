@@ -160,13 +160,13 @@ contract NestDeposit is IRecursive {
         // underlying.allowance(address(this), address(this));
 
         // Give this contract the ERC20 Tokens
-        underlying.transferFrom(_erc20Contract, address(this), _numTokensToSupply);
+        //underlying.transferFrom(msg.sender, address(this), _numTokensToSupply);
 
         // Calculate current balance  and add new balance to it
-        token.balance += mintResult;
+        //token.balance += mintResult;
 
         // Check if we should mint
-        IRecursive(address(this)).updateReserve(_erc20Contract, _cErc20Contract);
+        // IRecursive(address(this)).updateReserve(_erc20Contract, _cErc20Contract);
 
         return mintResult;
     }
