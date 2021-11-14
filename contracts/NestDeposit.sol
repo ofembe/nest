@@ -138,7 +138,7 @@ contract NestDeposit is IRecursive {
         CErc20 cToken = CErc20(_cErc20Contract);
 
         // Approve transfer on the ERC20 contract
-        underlying.approve(_cErc20Contract, _numTokensToSupply);
+        // underlying.approve(_cErc20Contract, _numTokensToSupply);
 
         //  Record tokens
         // Get user account
@@ -156,8 +156,11 @@ contract NestDeposit is IRecursive {
         // Update pool balance
         pools[_erc20Contract].balance += _numTokensToSupply;
 
+        // Check allowance
+        // underlying.allowance(address(this), address(this));
+
         // Give this contract the ERC20 Tokens
-        underlying.transfer(address(this), _numTokensToSupply);
+        underlying.transferFrom(_erc20Contract, address(this), _numTokensToSupply);
 
         // Calculate current balance  and add new balance to it
         token.balance += mintResult;
