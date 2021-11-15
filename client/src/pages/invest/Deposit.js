@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {utils} from "web3";
+import BigNumber from "bignumber.js";
 import NestDeposit from "../../contracts/NestDeposit.json";
 import Erc20 from "../../contracts/Erc20.json";
 
@@ -50,16 +51,18 @@ class Deposit extends Component {
   deposit = async () => {
     const { accounts, contract, web3 } = this.state;
     this.state.deposits.filter((d) => d.value > 0).forEach(async(dep) => {
+      const amount = ((new BigNumber(10)).exponentiatedBy(dep.address.decimals)).multipliedBy(dep.value);
+
       // Approve ERC contract approval
       const underlying = new web3.eth.Contract(Erc20.abi, dep.address.ercAddress);
-      const approve = await underlying.methods.approve(contract._address, dep.value).send({from: accounts[0]});
+      await underlying.methods.approve(contract._address, amount.toFixed()).send({from: accounts[0]});
 
     //  Send
     try {
         await contract.methods.depositErc20(
           dep.address.ercAddress,
-          dep.address.address,
-          parseInt(dep.value))
+          dep.address.address, 
+          amount.toFixed())
           .send({from: accounts[0]});
           console.log(dep.address.name);
         }catch(err) {
