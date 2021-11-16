@@ -40,6 +40,10 @@ interface IRecursive {
     function updateReserve(
         address _erc20Contract,
         address _cErc20Contract) external returns (bool);
+
+    function fillReserve(
+            address _erc20Contract,
+            uint256 amount) external returns (bool);
 }
 
 
@@ -98,11 +102,32 @@ contract NestDeposit is IRecursive {
             uint256 amount = pool.balance - pool.reserve;
             underlying.approve(_cErc20Contract, amount);
             cToken.mint((amount));
+
+             // Update pool balance
+            pool.balance -= amount;
         }
 
         return true;
     }
 
+       function fillReserve(
+            address _erc20Contract,
+            uint256 amount) external override returns (bool) {
+
+        // Get valid cERC20 address from previous succesful deposit
+        address _cErc20Contract = marketPairs[_erc20Contract];
+
+        // Create a reference to the corresponding cToken contract, like cDAI
+        CErc20 cToken = CErc20(_cErc20Contract);
+
+        // Redeem underlying
+        cToken.redeemUnderlying(amount);
+
+        // Update pool balance
+        pools[_erc20Contract].balance += amount;
+
+        return true;
+    }
     function depositErc20(
         address _erc20Contract,
         address _cErc20Contract,
@@ -150,6 +175,8 @@ contract NestDeposit is IRecursive {
 
         return mintResult;
     }
+
+
     function withdrawErc20Tokens(
         address _erc20Contract,
         uint256 amount
@@ -178,11 +205,12 @@ contract NestDeposit is IRecursive {
         // Get pool
         Pool storage pool = pools[_erc20Contract];
 
-        // Redeem from compound if pool balance is low
         if(pool.balance < amount) {
-            cToken.redeemUnderlying(amount);
-            pool.balance += amount;
+            // Redeem underlying
+            IRecursive(address(this)).fillReserve(_erc20Contract, amount);
         }
+
+        // uint256 redeemed = cToken.redeemUnderlying(amount);
 
         underlying.transfer(msg.sender, amount);
 
