@@ -10,6 +10,8 @@ interface Erc20 {
 interface CErc20 {
     function mint(uint256) external returns (uint256);
 
+    function approve(address, uint256) external returns (bool);
+
     function exchangeRateCurrent() external returns (uint256);
 
     function supplyRatePerBlock() external returns (uint256);
@@ -100,9 +102,6 @@ contract NestDeposit is IRecursive {
             uint256 amount = pool.balance - pool.reserve;
             underlying.approve(_cErc20Contract, amount);
             cToken.mint((amount));
-
-            // Save valid Erc20 to cErc20 pair
-            marketPairs[_erc20Contract] = _cErc20Contract;
         }
 
         return true;
@@ -117,6 +116,9 @@ contract NestDeposit is IRecursive {
 
         // Create a reference to the corresponding cToken contract, like cDAI
         CErc20 cToken = CErc20(_cErc20Contract);
+
+        // Approve transfer on the ERC20 contract
+        cToken.approve(_erc20Contract, amount);
 
         // Redeem underlying
         uint256 redeemed = cToken.redeemUnderlying(amount);
@@ -165,6 +167,9 @@ contract NestDeposit is IRecursive {
         // Calculate current balance  and add new balance to it
         token.balance += mintResult;
 
+        // Save valid Erc20 to cErc20 pair
+        marketPairs[_erc20Contract] = _cErc20Contract;
+
         // Check if we should mint
         IRecursive(address(this)).updateReserve(_erc20Contract, _cErc20Contract);
 
@@ -195,17 +200,20 @@ contract NestDeposit is IRecursive {
 
         uint256 underlyingAmount = token.balance / exchangeRateMantissa;
 
-        assert((underlyingAmount) > amount);
+        
+        require(underlyingAmount > amount, "You don't have enough funds");
+
+      
 
         // Get pool
         Pool storage pool = pools[_erc20Contract];
 
-        if(pool.reserve < amount) {
+        if(pool.balance < amount) {
             // Redeem underlying
             IRecursive(address(this)).fillReserve(_erc20Contract, amount);
         }
 
-        underlying.transferFrom(address(this), msg.sender, amount);
+        underlying.transfer(msg.sender, amount);
 
         // Subtract cTokens
         token.balance -= amount*exchangeRateMantissa;

@@ -76,11 +76,16 @@ class Deposit extends Component {
   withdraw = async () => {
     const { accounts, contract } = this.state;
     this.state.deposits.filter((d) => d.value > 0).forEach(async(dep) => {
+      const amount = ((new BigNumber(10)).exponentiatedBy(dep.address.decimals)).multipliedBy(dep.value);
+      try {
         await contract.methods.withdrawErc20Tokens(
           dep.address.ercAddress,
-          dep.value)
+          amount.toFixed())
           .send({from: accounts[0]});
           console.log(dep.address.name);
+        } catch(err) {
+            console.log(err);
+        }
     });
 
   };
