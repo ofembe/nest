@@ -48,8 +48,8 @@ interface IRecursive {
 
 
 contract NestDeposit is IRecursive {
-
-    uint256 feePercent;
+    mapping(bytes32 => uint256) internal nameNumberParameters;
+    mapping(address => uint256) internal addressNumberParameters;
 
     struct Pool {
         uint256 balance;
@@ -60,7 +60,6 @@ contract NestDeposit is IRecursive {
 
     struct Token {
         uint256 balance;
-        uint256 interest;
         uint256 deposit;
     }
 
@@ -216,7 +215,7 @@ contract NestDeposit is IRecursive {
 
         // Calculate interest and subtract fees
         uint256 interest = underlyingAmount - token.deposit;
-        uint256 fees = (amount/token.deposit)*interest*feePercent;
+        uint256 fees = (amount/token.deposit)*interest*nameNumberParameters["feePercent"];
 
         // Subtract erc token and fees
         token.deposit -= (fees + amount);
@@ -228,8 +227,6 @@ contract NestDeposit is IRecursive {
             // Redeem underlying
             IRecursive(address(this)).fillReserve(_erc20Contract, amount);
         }
-
-        // uint256 redeemed = cToken.redeemUnderlying(amount);
 
         underlying.transfer(msg.sender, amount);
 
