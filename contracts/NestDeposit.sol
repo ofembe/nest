@@ -49,6 +49,8 @@ interface IRecursive {
 
 contract NestDeposit is IRecursive {
 
+    uint256 feePercent;
+
     struct Pool {
         uint256 balance;
         uint256 reserve;
@@ -58,6 +60,8 @@ contract NestDeposit is IRecursive {
 
     struct Token {
         uint256 balance;
+        uint256 interest;
+        uint256 deposit;
     }
 
     struct Account {
@@ -139,6 +143,9 @@ contract NestDeposit is IRecursive {
         // Create a reference to the corresponding cToken contract, like cDAI
         CErc20 cToken = CErc20(_cErc20Contract);
 
+        // Get exchange rate
+        uint256 exchangeRateMantissa = cToken.exchangeRateCurrent();
+
         // Approve transfer on the ERC20 contract
         // underlying.approve(_cErc20Contract, _numTokensToSupply);
 
@@ -149,9 +156,12 @@ contract NestDeposit is IRecursive {
         // Save deposit
         Token storage token = account.tokens[_erc20Contract];
 
-        // Get exchange rate
-        uint256 exchangeRateMantissa = cToken.exchangeRateCurrent();
+        // Calculate interest
 
+        // Save amount being deposited
+        token.deposit += _numTokensToSupply;
+
+    
         // Calculate cToken value
         uint256 mintResult = _numTokensToSupply*exchangeRateMantissa;
 
@@ -193,14 +203,23 @@ contract NestDeposit is IRecursive {
         // Get user account
         Account storage account = accounts[msg.sender];
 
+        // Get exchange rate
+        uint256 exchangeRateMantissa = cToken.exchangeRateCurrent();
+
         // Check if user has enough funds
         Token storage token = account.tokens[_erc20Contract];
 
-        uint256 exchangeRateMantissa = cToken.exchangeRateCurrent();
-
+        // Calculate current underlying
         uint256 underlyingAmount = token.balance / exchangeRateMantissa;
 
         require(underlyingAmount > amount, "You don't have enough funds");
+
+        // Calculate interest and subtract fees
+        uint256 interest = underlyingAmount - token.deposit;
+        uint256 fees = (amount/token.deposit)*interest*feePercent;
+
+        // Subtract erc token and fees
+        token.deposit -= (fees + amount);
 
         // Get pool
         Pool storage pool = pools[_erc20Contract];
