@@ -218,7 +218,8 @@ contract NestDeposit is IRecursive {
         uint256 fees = (amount/token.deposit)*interest*nameNumberParameters["feePercent"];
 
         // Subtract erc token and fees
-        token.deposit -= (fees + amount);
+        token.deposit -= fees;
+        token.deposit -= amount;
 
         // Get pool
         Pool storage pool = pools[_erc20Contract];

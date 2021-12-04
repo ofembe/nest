@@ -6,7 +6,7 @@ import Erc20 from "../../contracts/Erc20.json";
 
 import getWeb3 from "../../getWeb3";
 
-import "../../App.css";
+import "../../App.scss";
 import { MarketItem } from "../../components/MarketItem";
 import { RinkebyAddresses } from "../../constants/addresses";
 import { TransferItem } from "../../components/TransferItem";

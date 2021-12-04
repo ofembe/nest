@@ -4,13 +4,15 @@
   "private": true,
   "homepage": "http://ofembe.github.io/nest",
   "dependencies": {
-    "@truffle/hdwallet-provider": "^1.6.0",
+    "@truffle/hdwallet-provider": "^2.0.0",
     "bignumber.js": "^9.0.1",
+    "bootstrap": "^4.6.1",
+    "node-sass": "^6.0.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^4.0.3",
     "tachyons": "^4.12.0",
-    "web3": "1.2.2"
+    "web3": "^1.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
