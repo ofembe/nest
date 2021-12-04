@@ -50,8 +50,19 @@ const Sidebar = () => {
                     </ul>
                     <div class="user-account-actions">
                         <ul class="g-3">
-                            <li><a href="deposits" class="btn btn-lg btn-primary"><span>Deposit</span></a></li>
-                            <li><a href="withdrawals" class="btn btn-lg btn-warning"><span>Withdraw</span></a></li>
+                            <li>
+                            <Link to="/deposits" class="btn btn-lg btn-primary">
+                                <span class="nk-menu-icon"><em class="icon ni ni-plus"></em></span>
+                                    <span className="nk-menu-text">Deposit</span>
+                                </Link>
+                                </li>
+                                
+                            <li>
+                            <Link to="/withdrawals" class="btn btn-lg btn-warning">
+                                <span class="nk-menu-icon"><em class="icon ni ni-minus"></em></span>
+                                    <span className="nk-menu-text">Withdraw</span>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
