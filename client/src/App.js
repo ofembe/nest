@@ -6,25 +6,28 @@ import {
 } from "react-router-dom";
 
 import "./App.scss";
+import Balance from "./pages/invest/Balance";
+import Deposit from "./pages/invest/Deposit";
+import Withdraw from "./pages/invest/Withdraw";
 import Sample from "./pages/sample";
+import Transfer from "./pages/transfer";
 import Layout from "./parts/Layout";
 
 
 const App = () => {
     return (
-      <Layout>
+      
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Sample />}>
-          <Route index element={<Sample />} />
-          <Route path="transfers" element={<Sample />} />
-          <Route path="deposits" element={<Sample />} />
-          <Route path="withdrawals" element={<Sample />} />
-          <Route path="balances" element={<Sample />} />
-        </Route>
+          <Route path="/" element={<Deposit />}/>
+          <Route index element={<Deposit />} />
+          <Route path="transfers" element={<Transfer />} />
+          <Route path="deposits" element={<Deposit />} />
+          <Route path="withdrawals" element={<Withdraw />} />
+          <Route path="balances" element={<Balance />} />
       </Routes>
     </BrowserRouter>
-    </Layout>
+    
     );
 }
 

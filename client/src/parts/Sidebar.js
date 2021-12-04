@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
     return (
@@ -49,8 +50,8 @@ const Sidebar = () => {
                     </ul>
                     <div class="user-account-actions">
                         <ul class="g-3">
-                            <li><a href="#" class="btn btn-lg btn-primary"><span>Deposit</span></a></li>
-                            <li><a href="#" class="btn btn-lg btn-warning"><span>Withdraw</span></a></li>
+                            <li><a href="deposits" class="btn btn-lg btn-primary"><span>Deposit</span></a></li>
+                            <li><a href="withdrawals" class="btn btn-lg btn-warning"><span>Withdraw</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -119,112 +120,36 @@ const Sidebar = () => {
                             <h6 class="overline-title">Menu</h6>
                         </li>
                         <li class="nk-menu-item">
-                            <a href="html/crypto/index.html" class="nk-menu-link">
-                                <span class="nk-menu-icon"><em class="icon ni ni-dashboard"></em></span>
-                                <span class="nk-menu-text">Dashboard</span>
-                            </a>
+                            <div class="nk-menu-link">
+                                <Link to="/deposits" class="">
+                                <span class="nk-menu-icon"><em class="icon ni ni-plus"></em></span>
+                                    <span className="nk-menu-text">Deposit</span>
+                                </Link>
+                            </div>
                         </li>
                         <li class="nk-menu-item">
-                            <a href="html/crypto/accounts.html" class="nk-menu-link">
-                                <span class="nk-menu-icon"><em class="icon ni ni-user-c"></em></span>
-                                <span class="nk-menu-text">My Account</span>
-                            </a>
+                            <div class="nk-menu-link">
+                                <Link to="/withdrawals" class="">
+                                <span class="nk-menu-icon"><em class="icon ni ni-minus"></em></span>
+                                    <span className="nk-menu-text">Withdraw</span>
+                                </Link>
+                            </div>
                         </li>
                         <li class="nk-menu-item">
-                            <a href="html/crypto/wallets.html" class="nk-menu-link">
-                                <span class="nk-menu-icon"><em class="icon ni ni-wallet-alt"></em></span>
-                                <span class="nk-menu-text">Wallets</span>
-                            </a>
+                            <div class="nk-menu-link">
+                                <Link to="/transfers" class="">
+                                <span class="nk-menu-icon"><em class="icon ni ni-arrow-from-right"></em></span>
+                                    <span className="nk-menu-text">Transfer</span>
+                                </Link>
+                            </div>
                         </li>
                         <li class="nk-menu-item">
-                            <a href="html/crypto/buy-sell.html" class="nk-menu-link">
-                                <span class="nk-menu-icon"><em class="icon ni ni-coins"></em></span>
-                                <span class="nk-menu-text">Buy / Sell</span>
-                            </a>
-                        </li>
-                        <li class="nk-menu-item">
-                            <a href="html/crypto/order-history.html" class="nk-menu-link">
-                                <span class="nk-menu-icon"><em class="icon ni ni-repeat"></em></span>
-                                <span class="nk-menu-text">Orders</span>
-                            </a>
-                        </li>
-                        <li class="nk-menu-item">
-                            <a href="html/crypto/chats.html" class="nk-menu-link">
-                                <span class="nk-menu-icon"><em class="icon ni ni-chat-circle"></em></span>
-                                <span class="nk-menu-text">Chats</span>
-                            </a>
-                        </li>
-                        <li class="nk-menu-item">
-                            <a href="html/crypto/profile.html" class="nk-menu-link">
-                                <span class="nk-menu-icon"><em class="icon ni ni-account-setting"></em></span>
-                                <span class="nk-menu-text">My Profile</span>
-                            </a>
-                        </li>
-                        <li class="nk-menu-item has-sub">
-                            <a href="#" class="nk-menu-link nk-menu-toggle">
-                                <span class="nk-menu-icon"><em class="icon ni ni-files"></em></span>
-                                <span class="nk-menu-text">Additional Pages</span>
-                            </a>
-                            <ul class="nk-menu-sub">
-                                <li class="nk-menu-item">
-                                    <a href="html/crypto/welcome.html" class="nk-menu-link"><span class="nk-menu-text">Welcome</span></a>
-                                </li>
-                                <li class="nk-menu-item">
-                                    <a href="html/crypto/kyc-application.html" class="nk-menu-link"><span class="nk-menu-text">KYC - Get Started</span></a>
-                                </li>
-                                <li class="nk-menu-item">
-                                    <a href="html/crypto/kyc-form.html" class="nk-menu-link"><span class="nk-menu-text">KYC - Application Form</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nk-menu-heading">
-                            <h6 class="overline-title">Return to</h6>
-                        </li>
-                        <li class="nk-menu-item">
-                            <a href="html/index.html" class="nk-menu-link">
-                                <span class="nk-menu-icon"><em class="icon ni ni-dashlite"></em></span>
-                                <span class="nk-menu-text">Main Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="nk-menu-item">
-                            <a href="html/components.html" class="nk-menu-link">
-                                <span class="nk-menu-icon"><em class="icon ni ni-layers"></em></span>
-                                <span class="nk-menu-text">All Components</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="nk-sidebar-widget">
-                    <div class="widget-title">
-                        <h6 class="overline-title">Crypto Accounts <span>(4)</span></h6>
-                        <a href="#" class="link">View All</a>
-                    </div>
-                    <ul class="wallet-list">
-                        <li class="wallet-item">
-                            <a href="#">
-                                <div class="wallet-icon"><em class="icon ni ni-sign-kobo"></em></div>
-                                <div class="wallet-text">
-                                    <h6 class="wallet-name">NioWallet</h6>
-                                    <span class="wallet-balance">30.959040 <span class="currency currency-nio">NIO</span></span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="wallet-item">
-                            <a href="#">
-                                <div class="wallet-icon"><em class="icon ni ni-sign-btc"></em></div>
-                                <div class="wallet-text">
-                                    <h6 class="wallet-name">Bitcoin Wallet</h6>
-                                    <span class="wallet-balance">0.0495950 <span class="currency currency-btc">BTC</span></span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="wallet-item wallet-item-add">
-                            <a href="#">
-                                <div class="wallet-icon"><em class="icon ni ni-plus"></em></div>
-                                <div class="wallet-text">
-                                    <h6 class="wallet-name">Add another wallet</h6>
-                                </div>
-                            </a>
+                            <div class="nk-menu-link">
+                                <Link to="/balances" class="">
+                                <span class="nk-menu-icon"><em class="icon ni ni-list-check"></em></span>
+                                    <span className="nk-menu-text">Balances</span>
+                                </Link>
+                            </div>
                         </li>
                     </ul>
                 </div>

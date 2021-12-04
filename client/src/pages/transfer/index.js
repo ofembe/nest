@@ -5,14 +5,13 @@ import NestDeposit from "../../contracts/NestDeposit.json";
 import Erc20 from "../../contracts/Erc20.json";
 
 import getWeb3 from "../../getWeb3";
-
-import "../../App.scss";
-import { MarketItem } from "../../components/MarketItem";
-import { RinkebyAddresses } from "../../constants/addresses";
-import { TransferItem } from "../../components/TransferItem";
 import Layout from "../../parts/Layout";
 
-class Deposit extends Component {
+import "../../App.scss";
+import { RinkebyAddresses } from "../../constants/addresses";
+import { TransferItem } from "../../components/TransferItem";
+
+class Transfer extends Component {
   state = { deposits: [], storageValue: 0, web3: null, accounts: null, contract: null };
 
   componentDidMount = async () => {
@@ -110,16 +109,17 @@ class Deposit extends Component {
   render() {
     return (
       <Layout>
-        <h4>Deposit</h4>
+        <h4>Transfer</h4>
+        <TransferItem submit={this.sendEther} />
         { RinkebyAddresses.map((a) => {
-            return <MarketItem key={a.name} update={this.update} address={a}/>
+            return <TransferItem key={a.name} submit={this.update} token={a}/>
         })
         }
-      </Layout>  
+    </Layout>  
     )
 
 
   }
 }
 
-export default Deposit;
+export default Transfer;

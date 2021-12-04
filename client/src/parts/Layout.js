@@ -168,7 +168,7 @@ const Layout = (props) => {
              <div class="nk-footer nk-footer-fluid">
                  <div class="container-fluid">
                      <div class="nk-footer-wrap">
-                         <div class="nk-footer-copyright"> &copy; 2021 DashLite. Template by <a href="#">Softnio</a>
+                         <div class="nk-footer-copyright"> &copy; 2021 Nest.
                          </div>
                          <div class="nk-footer-links">
                              <ul class="nav nav-sm">
