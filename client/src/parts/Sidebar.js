@@ -120,36 +120,28 @@ const Sidebar = () => {
                             <h6 class="overline-title">Menu</h6>
                         </li>
                         <li class="nk-menu-item">
-                            <div class="nk-menu-link">
-                                <Link to="/deposits" class="">
+                                <Link to="/deposits" class="nk-menu-link">
                                 <span class="nk-menu-icon"><em class="icon ni ni-plus"></em></span>
                                     <span className="nk-menu-text">Deposit</span>
                                 </Link>
-                            </div>
                         </li>
                         <li class="nk-menu-item">
-                            <div class="nk-menu-link">
-                                <Link to="/withdrawals" class="">
+                                <Link to="/withdrawals" class="nk-menu-link">
                                 <span class="nk-menu-icon"><em class="icon ni ni-minus"></em></span>
                                     <span className="nk-menu-text">Withdraw</span>
                                 </Link>
-                            </div>
                         </li>
                         <li class="nk-menu-item">
-                            <div class="nk-menu-link">
-                                <Link to="/transfers" class="">
+                                <Link to="/transfers" class="nk-menu-link">
                                 <span class="nk-menu-icon"><em class="icon ni ni-arrow-from-right"></em></span>
                                     <span className="nk-menu-text">Transfer</span>
                                 </Link>
-                            </div>
                         </li>
                         <li class="nk-menu-item">
-                            <div class="nk-menu-link">
-                                <Link to="/balances" class="">
+                                <Link to="/balances" class="nk-menu-link">
                                 <span class="nk-menu-icon"><em class="icon ni ni-list-check"></em></span>
                                     <span className="nk-menu-text">Balances</span>
                                 </Link>
-                            </div>
                         </li>
                     </ul>
                 </div>
