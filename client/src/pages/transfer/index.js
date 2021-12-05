@@ -110,7 +110,6 @@ class Transfer extends Component {
     return (
       <Layout>
         <h4>Transfer</h4>
-        <TransferItem submit={this.sendEther} />
         { RinkebyAddresses.map((a) => {
             return <TransferItem key={a.name} submit={this.update} token={a}/>
         })
