@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
+    const location = useLocation();
     return (
         <>
     <div class="nk-sidebar nk-sidebar-fixed " data-content="sidebarMenu">
@@ -130,28 +131,22 @@ const Sidebar = () => {
                         <li class="nk-menu-heading">
                             <h6 class="overline-title">Menu</h6>
                         </li>
-                        <li class="nk-menu-item">
+                        <li class={`nk-menu-item ${location.pathname === '/deposits'?"active": ""}`}>
                                 <Link to="/deposits" class="nk-menu-link">
                                 <span class="nk-menu-icon"><em class="icon ni ni-plus"></em></span>
                                     <span className="nk-menu-text">Deposit</span>
                                 </Link>
                         </li>
-                        <li class="nk-menu-item">
+                        <li class={`nk-menu-item ${location.pathname === '/withdrawals'?"active": ""}`}>
                                 <Link to="/withdrawals" class="nk-menu-link">
                                 <span class="nk-menu-icon"><em class="icon ni ni-minus"></em></span>
                                     <span className="nk-menu-text">Withdraw</span>
                                 </Link>
                         </li>
-                        <li class="nk-menu-item">
+                        <li class={`nk-menu-item ${location.pathname === '/transfers'?"active": ""}`}>
                                 <Link to="/transfers" class="nk-menu-link">
                                 <span class="nk-menu-icon"><em class="icon ni ni-arrow-from-right"></em></span>
                                     <span className="nk-menu-text">Transfer</span>
-                                </Link>
-                        </li>
-                        <li class="nk-menu-item">
-                                <Link to="/balances" class="nk-menu-link">
-                                <span class="nk-menu-icon"><em class="icon ni ni-list-check"></em></span>
-                                    <span className="nk-menu-text">Balances</span>
                                 </Link>
                         </li>
                     </ul>
