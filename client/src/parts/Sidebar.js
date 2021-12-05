@@ -53,14 +53,14 @@ const Sidebar = () => {
                         <ul class="g-3">
                             <li>
                             <Link to="/deposits" class="btn btn-lg btn-primary">
-                                <span class="nk-menu-icon"><em class="icon ni ni-plus"></em></span>
+                                <span><em class="icon ni ni-plus"></em></span>
                                     <span className="nk-menu-text">Deposit</span>
                                 </Link>
                                 </li>
                                 
                             <li>
                             <Link to="/withdrawals" class="btn btn-lg btn-warning">
-                                <span class="nk-menu-icon"><em class="icon ni ni-minus"></em></span>
+                                <span><em class="icon ni ni-minus"></em></span>
                                     <span className="nk-menu-text">Withdraw</span>
                                 </Link>
                             </li>
@@ -130,6 +130,12 @@ const Sidebar = () => {
                     <ul class="nk-menu">
                         <li class="nk-menu-heading">
                             <h6 class="overline-title">Menu</h6>
+                        </li>
+                        <li class={`nk-menu-item ${location.pathname === '/'?"active": ""}`}>
+                                <Link to="/" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-dashboard"></em></span>
+                                    <span className="nk-menu-text">Dashboard</span>
+                                </Link>
                         </li>
                         <li class={`nk-menu-item ${location.pathname === '/deposits'?"active": ""}`}>
                                 <Link to="/deposits" class="nk-menu-link">

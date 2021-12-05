@@ -8,7 +8,9 @@ const Dashboard = () => {
 
     return (
         <Layout>
-            <Sample/>
+            <div>
+                Can display some summary here
+            </div>
         </Layout>
     )
 };
