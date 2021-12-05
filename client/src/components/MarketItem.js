@@ -14,20 +14,22 @@ export const MarketItem = ({address, update}) => {
         return null;
     }
 
-    return <div className="row">
-    <div className="col-xs-12 col m-1">
-      <div className="d-inline-block">
-        <img height="20" src="https://avatars.githubusercontent.com/u/32911405?s=200&v=4"/>
-      </div>
-      <span>{address.name}</span>
-    </div>
-    <div className="col-xs-12 col m-1">
-        <input onChange={(e) => {update(address, e.target.value)}} placeholder="0.000" type="number"/>
-    </div>
-    <div className="col-xs-12 col m-1">
-        <button className="btn btn-primary" onClick={()=>{}}>Confirm</button>
-    </div>
-
-  </div>
+    return (
+      <div className="mt-2">
+      <form>
+        <div class="form-group">
+          <label for="amount">
+          <div className="d-inline-block">
+            <img height="20" src="https://avatars.githubusercontent.com/u/32911405?s=200&v=4"/>
+          </div>
+            <span>Amount({address.name})</span>
+            </label>
+          <input style={{maxWidth: 300}} id="amount" class="form-control" onChange={(e) => {update(address, e.target.value)}} placeholder="0.000" type="number"/>
+        </div>
+        <div class="form-group">
+            <button type="button" className="btn btn-primary" onClick={()=>{}}>Confirm</button>
+        </div>
+  </form>
+  </div>)
 }
 
