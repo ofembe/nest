@@ -1,7 +1,9 @@
 import React from "react";
 import Sidebar from "./Sidebar";
+import useEthereumAccounts from "../hooks/useEthereumAccounts";
 
 const Layout = (props) => {
+    const {web3, accounts, contract} = useEthereumAccounts();
     return (
  <div class="nk-body npc-crypto bg-white has-sidebar ">
  <div class="nk-app-root">

@@ -133,7 +133,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.5+commit.a4f2e591\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"exchangeRateCurrent\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"redeem\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"redeemUnderlying\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"supplyRatePerBlock\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/NestDeposit.sol\":\"CErc20\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/NestDeposit.sol\":{\"keccak256\":\"0x0e40425d91fb258a71135256766b5a05e7d43fe4176e2863f9c7133fb8e144cd\",\"urls\":[\"bzz-raw://a17560cfe2c52c2859fbd18702916da5cba8f38aaac8b58fc6ad25eb2572e91d\",\"dweb:/ipfs/QmZGRvVAL2nK9BCQYrrgRsKKMKLWtSPNox8rcQsJhHGbM3\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.5+commit.a4f2e591\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"exchangeRateCurrent\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"redeem\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"redeemUnderlying\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"supplyRatePerBlock\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/NestDeposit.sol\":\"CErc20\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/NestDeposit.sol\":{\"keccak256\":\"0xc0ea49e427dc980b6a9a1110a1f577a64d5cf8112ae80f309dcd3c3f3a830cb3\",\"urls\":[\"bzz-raw://769fdd356bb19776d9e561c4a8125bbca7f18f0dc4ee28ba563cffb05b52c7a0\",\"dweb:/ipfs/QmRcKAYse3AdLBCGsKC4G413DhPfjeidCttmcnBXGRFtqy\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -141,7 +141,7 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity >=0.4.22 <0.9.0;\n\ninterface Erc20 {\n    function approve(address, uint256) external returns (bool);\n\n    function transfer(address, uint256) external returns (bool);\n\n    function transferFrom(address, address, uint256) external returns (bool);\n}\ninterface CErc20 {\n    function mint(uint256) external returns (uint256);\n\n    function approve(address, uint256) external returns (bool);\n\n    function exchangeRateCurrent() external returns (uint256);\n\n    function supplyRatePerBlock() external returns (uint256);\n\n    function redeem(uint) external returns (uint);\n\n    function redeemUnderlying(uint) external returns (uint);\n\n    function transfer(address, uint256) external returns (bool);\n}\ninterface CEth {\n    function mint() external payable;\n\n    function exchangeRateCurrent() external returns (uint256);\n\n    function supplyRatePerBlock() external returns (uint256);\n\n    function redeem(uint) external returns (uint);\n\n    function redeemUnderlying(uint) external returns (uint);\n}\n\n\n\ninterface IRecursive {\n    function updateReserve(\n        address _erc20Contract,\n        address _cErc20Contract) external returns (bool);\n\n    function fillReserve(\n            address _erc20Contract,\n            uint256 amount) external returns (bool);\n}\n\n\ncontract NestDeposit is IRecursive {\n    mapping(bytes32 => uint256) internal nameNumberParameters;\n    mapping(address => uint256) internal addressNumberParameters;\n\n    struct Pool {\n        uint256 balance;\n        uint256 reserve;\n        uint256 performanceFee;\n        uint256 managementFee;\n    }\n\n    struct Token {\n        uint256 balance;\n        uint256 deposit;\n    }\n\n    struct Account {\n        mapping(address => Token) tokens;\n    }\n\n    mapping(address => Account) internal accounts;\n\n    mapping(address => Pool) internal pools;\n\n    mapping(address => address) internal marketPairs;\n\n    event MyLog(string, uint256);\n\n    event DepositMade(address pool, address cerc20, address from, uint256 amount);\n\n    event WithdrawalMade(address pool, address cerc20, address to, uint256 amount);\n\n    function setPoolReserveMin(address _erc20Contract, uint256 amount) external returns(bool){\n        Pool storage pool = pools[_erc20Contract];\n        pool.reserve = amount;\n        return true;\n    }\n\n    function getPoolReserveMin(address _erc20Contract) external view returns(uint256){\n        return pools[_erc20Contract].reserve;\n    }\n\n    function updateReserve(\n        address _erc20Contract,\n        address _cErc20Contract) external override returns (bool) {\n\n        // Create a reference to the underlying asset contract, like DAI.\n        Erc20 underlying = Erc20(_erc20Contract);\n\n        // Create a reference to the corresponding cToken contract, like cDAI\n        CErc20 cToken = CErc20(_cErc20Contract);\n\n        // Update pool balance\n        Pool storage pool = pools[_erc20Contract];\n        if(pool.balance > pool.reserve ) {\n            uint256 amount = pool.balance - pool.reserve;\n            underlying.approve(_cErc20Contract, amount);\n            cToken.mint((amount));\n\n             // Update pool balance\n            pool.balance -= amount;\n        }\n\n        return true;\n    }\n\n       function fillReserve(\n            address _erc20Contract,\n            uint256 amount) external override returns (bool) {\n\n        // Get valid cERC20 address from previous succesful deposit\n        address _cErc20Contract = marketPairs[_erc20Contract];\n\n        // Create a reference to the corresponding cToken contract, like cDAI\n        CErc20 cToken = CErc20(_cErc20Contract);\n\n        // Redeem underlying\n        cToken.redeemUnderlying(amount);\n\n        // Update pool balance\n        pools[_erc20Contract].balance += amount;\n\n        return true;\n    }\n    function depositErc20(\n        address _erc20Contract,\n        address _cErc20Contract,\n        uint256 _numTokensToSupply\n    ) public returns (uint256) {        \n        // Create a reference to the underlying asset contract, like DAI.\n        Erc20 underlying = Erc20(_erc20Contract);\n\n        // Create a reference to the corresponding cToken contract, like cDAI\n        CErc20 cToken = CErc20(_cErc20Contract);\n\n        // Get exchange rate\n        uint256 exchangeRateMantissa = cToken.exchangeRateCurrent();\n\n        // Approve transfer on the ERC20 contract\n        // underlying.approve(_cErc20Contract, _numTokensToSupply);\n\n        //  Record tokens\n        // Get user account\n        Account storage account = accounts[msg.sender];\n\n        // Save deposit\n        Token storage token = account.tokens[_erc20Contract];\n\n        // Calculate interest\n\n        // Save amount being deposited\n        token.deposit += _numTokensToSupply;\n\n    \n        // Calculate cToken value\n        uint256 mintResult = _numTokensToSupply*exchangeRateMantissa;\n\n        // Update pool balance\n        pools[_erc20Contract].balance += _numTokensToSupply;\n\n        // Check allowance\n        // underlying.allowance(address(this), address(this));\n\n        // Give this contract the ERC20 Tokens\n        underlying.transferFrom(msg.sender, address(this), _numTokensToSupply);\n\n        // Calculate current balance  and add new balance to it\n        token.balance += mintResult;\n\n        // Save valid Erc20 to cErc20 pair\n        marketPairs[_erc20Contract] = _cErc20Contract;\n\n        // Check if we should mint\n        IRecursive(address(this)).updateReserve(_erc20Contract, _cErc20Contract);\n\n        return mintResult;\n    }\n\n\n    function withdrawErc20Tokens(\n        address _erc20Contract,\n        uint256 amount\n    ) public returns (bool) {\n        // Get valid cERC20 address from previous succesful deposit\n        address _cErc20Contract = marketPairs[_erc20Contract];\n\n        // Create a reference to the underlying asset contract, like DAI.\n        Erc20 underlying = Erc20(_erc20Contract);\n\n        // Create a reference to the corresponding cToken contract, like cDAI\n        CErc20 cToken = CErc20(_cErc20Contract);\n\n        // Get user account\n        Account storage account = accounts[msg.sender];\n\n        // Get exchange rate\n        uint256 exchangeRateMantissa = cToken.exchangeRateCurrent();\n\n        // Check if user has enough funds\n        Token storage token = account.tokens[_erc20Contract];\n\n        // Calculate current underlying\n        uint256 underlyingAmount = token.balance / exchangeRateMantissa;\n\n        require(underlyingAmount > amount, \"You don't have enough funds\");\n\n        // Calculate interest and subtract fees\n        uint256 interest = underlyingAmount - token.deposit;\n        uint256 fees = (amount/token.deposit)*interest*nameNumberParameters[\"feePercent\"];\n\n        // Subtract erc token and fees\n        token.deposit -= (fees + amount);\n\n        // Get pool\n        Pool storage pool = pools[_erc20Contract];\n\n        if(pool.balance < amount) {\n            // Redeem underlying\n            IRecursive(address(this)).fillReserve(_erc20Contract, amount);\n        }\n\n        underlying.transfer(msg.sender, amount);\n\n        // Subtract cTokens\n        token.balance -= amount*exchangeRateMantissa;\n\n        return true;\n    }\n\n     receive() external payable {\n            // React to receiving ether\n     }\n}",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\n\ninterface Erc20 {\n    function approve(address, uint256) external returns (bool);\n\n    function transfer(address, uint256) external returns (bool);\n\n    function transferFrom(address, address, uint256) external returns (bool);\n}\ninterface CErc20 {\n    function mint(uint256) external returns (uint256);\n\n    function approve(address, uint256) external returns (bool);\n\n    function exchangeRateCurrent() external returns (uint256);\n\n    function supplyRatePerBlock() external returns (uint256);\n\n    function redeem(uint) external returns (uint);\n\n    function redeemUnderlying(uint) external returns (uint);\n\n    function transfer(address, uint256) external returns (bool);\n}\ninterface CEth {\n    function mint() external payable;\n\n    function exchangeRateCurrent() external returns (uint256);\n\n    function supplyRatePerBlock() external returns (uint256);\n\n    function redeem(uint) external returns (uint);\n\n    function redeemUnderlying(uint) external returns (uint);\n}\n\n\n\ninterface IRecursive {\n    function updateReserve(\n        address _erc20Contract,\n        address _cErc20Contract) external returns (bool);\n\n    function fillReserve(\n            address _erc20Contract,\n            uint256 amount) external returns (bool);\n}\n\n\ncontract NestDeposit is IRecursive {\n    mapping(bytes32 => uint256) internal nameNumberParameters;\n    mapping(address => uint256) internal addressNumberParameters;\n\n    struct Pool {\n        uint256 balance;\n        uint256 reserve;\n        uint256 performanceFee;\n        uint256 managementFee;\n    }\n\n    struct Token {\n        uint256 balance;\n        uint256 deposit;\n    }\n\n    struct Account {\n        mapping(address => Token) tokens;\n    }\n\n    mapping(address => Account) internal accounts;\n\n    mapping(address => Pool) internal pools;\n\n    mapping(address => address) internal marketPairs;\n\n    event MyLog(string, uint256);\n\n    event DepositMade(address pool, address cerc20, address from, uint256 amount);\n\n    event WithdrawalMade(address pool, address cerc20, address to, uint256 amount);\n\n    function setPoolReserveMin(address _erc20Contract, uint256 amount) external returns(bool){\n        Pool storage pool = pools[_erc20Contract];\n        pool.reserve = amount;\n        return true;\n    }\n\n    function getPoolReserveMin(address _erc20Contract) external view returns(uint256){\n        return pools[_erc20Contract].reserve;\n    }\n\n    function updateReserve(\n        address _erc20Contract,\n        address _cErc20Contract) external override returns (bool) {\n\n        // Create a reference to the underlying asset contract, like DAI.\n        Erc20 underlying = Erc20(_erc20Contract);\n\n        // Create a reference to the corresponding cToken contract, like cDAI\n        CErc20 cToken = CErc20(_cErc20Contract);\n\n        // Update pool balance\n        Pool storage pool = pools[_erc20Contract];\n        if(pool.balance > pool.reserve ) {\n            uint256 amount = pool.balance - pool.reserve;\n            underlying.approve(_cErc20Contract, amount);\n            cToken.mint((amount));\n\n             // Update pool balance\n            pool.balance -= amount;\n        }\n\n        return true;\n    }\n\n       function fillReserve(\n            address _erc20Contract,\n            uint256 amount) external override returns (bool) {\n\n        // Get valid cERC20 address from previous succesful deposit\n        address _cErc20Contract = marketPairs[_erc20Contract];\n\n        // Create a reference to the corresponding cToken contract, like cDAI\n        CErc20 cToken = CErc20(_cErc20Contract);\n\n        // Redeem underlying\n        cToken.redeemUnderlying(amount);\n\n        // Update pool balance\n        pools[_erc20Contract].balance += amount;\n\n        return true;\n    }\n    function depositErc20(\n        address _erc20Contract,\n        address _cErc20Contract,\n        uint256 _numTokensToSupply\n    ) public returns (uint256) {        \n        // Create a reference to the underlying asset contract, like DAI.\n        Erc20 underlying = Erc20(_erc20Contract);\n\n        // Create a reference to the corresponding cToken contract, like cDAI\n        CErc20 cToken = CErc20(_cErc20Contract);\n\n        // Get exchange rate\n        uint256 exchangeRateMantissa = cToken.exchangeRateCurrent();\n\n        // Approve transfer on the ERC20 contract\n        // underlying.approve(_cErc20Contract, _numTokensToSupply);\n\n        //  Record tokens\n        // Get user account\n        Account storage account = accounts[msg.sender];\n\n        // Save deposit\n        Token storage token = account.tokens[_erc20Contract];\n\n        // Calculate interest\n\n        // Save amount being deposited\n        token.deposit += _numTokensToSupply;\n\n    \n        // Calculate cToken value\n        uint256 mintResult = _numTokensToSupply*exchangeRateMantissa;\n\n        // Update pool balance\n        pools[_erc20Contract].balance += _numTokensToSupply;\n\n        // Check allowance\n        // underlying.allowance(address(this), address(this));\n\n        // Give this contract the ERC20 Tokens\n        underlying.transferFrom(msg.sender, address(this), _numTokensToSupply);\n\n        // Calculate current balance  and add new balance to it\n        token.balance += mintResult;\n\n        // Save valid Erc20 to cErc20 pair\n        marketPairs[_erc20Contract] = _cErc20Contract;\n\n        // Check if we should mint\n        IRecursive(address(this)).updateReserve(_erc20Contract, _cErc20Contract);\n\n        return mintResult;\n    }\n\n\n    function withdrawErc20Tokens(\n        address _erc20Contract,\n        uint256 amount\n    ) public returns (bool) {\n        // Get valid cERC20 address from previous succesful deposit\n        address _cErc20Contract = marketPairs[_erc20Contract];\n\n        // Create a reference to the underlying asset contract, like DAI.\n        Erc20 underlying = Erc20(_erc20Contract);\n\n        // Create a reference to the corresponding cToken contract, like cDAI\n        CErc20 cToken = CErc20(_cErc20Contract);\n\n        // Get user account\n        Account storage account = accounts[msg.sender];\n\n        // Get exchange rate\n        uint256 exchangeRateMantissa = cToken.exchangeRateCurrent();\n\n        // Check if user has enough funds\n        Token storage token = account.tokens[_erc20Contract];\n\n        // Calculate current underlying\n        uint256 underlyingAmount = token.balance / exchangeRateMantissa;\n\n        require(underlyingAmount > amount, \"You don't have enough funds\");\n\n        // Calculate interest and subtract fees\n        uint256 interest = underlyingAmount - token.deposit;\n        uint256 fees = (amount/token.deposit)*interest*nameNumberParameters[\"feePercent\"];\n\n        // Subtract erc token and fees\n        token.deposit -= fees;\n        token.deposit -= amount;\n\n        // Get pool\n        Pool storage pool = pools[_erc20Contract];\n\n        if(pool.balance < amount) {\n            // Redeem underlying\n            IRecursive(address(this)).fillReserve(_erc20Contract, amount);\n        }\n\n        underlying.transfer(msg.sender, amount);\n\n        // Subtract cTokens\n        token.balance -= amount*exchangeRateMantissa;\n\n        return true;\n    }\n\n     receive() external payable {\n            // React to receiving ether\n     }\n}",
   "sourcePath": "/Users/victoria/projects/nest/contracts/NestDeposit.sol",
   "ast": {
     "absolutePath": "project:/contracts/NestDeposit.sol",
@@ -159,10 +159,10 @@
         128
       ],
       "NestDeposit": [
-        591
+        594
       ]
     },
-    "id": 592,
+    "id": 595,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -555,7 +555,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 592,
+        "scope": 595,
         "src": "34:228:0",
         "usedErrors": []
       },
@@ -1155,7 +1155,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 592,
+        "scope": 595,
         "src": "263:447:0",
         "usedErrors": []
       },
@@ -1477,7 +1477,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 592,
+        "scope": 595,
         "src": "711:297:0",
         "usedErrors": []
       },
@@ -1719,7 +1719,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 592,
+        "scope": 595,
         "src": "1012:258:0",
         "usedErrors": []
       },
@@ -1742,9 +1742,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 591,
+        "id": 594,
         "linearizedBaseContracts": [
-          591,
+          594,
           128
         ],
         "name": "NestDeposit",
@@ -1758,7 +1758,7 @@
             "name": "nameNumberParameters",
             "nameLocation": "1351:20:0",
             "nodeType": "VariableDeclaration",
-            "scope": 591,
+            "scope": 594,
             "src": "1314:57:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1804,7 +1804,7 @@
             "name": "addressNumberParameters",
             "nameLocation": "1414:23:0",
             "nodeType": "VariableDeclaration",
-            "scope": 591,
+            "scope": 594,
             "src": "1377:60:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1959,7 +1959,7 @@
             "name": "Pool",
             "nameLocation": "1451:4:0",
             "nodeType": "StructDefinition",
-            "scope": 591,
+            "scope": 594,
             "src": "1444:132:0",
             "visibility": "public"
           },
@@ -2025,7 +2025,7 @@
             "name": "Token",
             "nameLocation": "1589:5:0",
             "nodeType": "StructDefinition",
-            "scope": 591,
+            "scope": 594,
             "src": "1582:70:0",
             "visibility": "public"
           },
@@ -2090,7 +2090,7 @@
             "name": "Account",
             "nameLocation": "1665:7:0",
             "nodeType": "StructDefinition",
-            "scope": 591,
+            "scope": 594,
             "src": "1658:64:0",
             "visibility": "public"
           },
@@ -2101,7 +2101,7 @@
             "name": "accounts",
             "nameLocation": "1765:8:0",
             "nodeType": "VariableDeclaration",
-            "scope": 591,
+            "scope": 594,
             "src": "1728:45:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2154,7 +2154,7 @@
             "name": "pools",
             "nameLocation": "1814:5:0",
             "nodeType": "VariableDeclaration",
-            "scope": 591,
+            "scope": 594,
             "src": "1780:39:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2207,7 +2207,7 @@
             "name": "marketPairs",
             "nameLocation": "1863:11:0",
             "nodeType": "VariableDeclaration",
-            "scope": 591,
+            "scope": 594,
             "src": "1826:48:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2851,7 +2851,7 @@
               ],
               "src": "2168:6:0"
             },
-            "scope": 591,
+            "scope": 594,
             "src": "2085:199:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -3000,7 +3000,7 @@
               ],
               "src": "2362:9:0"
             },
-            "scope": 591,
+            "scope": 594,
             "src": "2290:134:0",
             "stateMutability": "view",
             "virtual": false,
@@ -3834,7 +3834,7 @@
               ],
               "src": "2545:6:0"
             },
-            "scope": 591,
+            "scope": 594,
             "src": "2430:763:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -4301,7 +4301,7 @@
               ],
               "src": "3314:6:0"
             },
-            "scope": 591,
+            "scope": 594,
             "src": "3202:560:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -5029,7 +5029,7 @@
                             "referencedDeclaration": 4294967268,
                             "src": "5109:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_NestDeposit_$591",
+                              "typeIdentifier": "t_contract$_NestDeposit_$594",
                               "typeString": "contract NestDeposit"
                             }
                           }
@@ -5037,7 +5037,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_NestDeposit_$591",
+                              "typeIdentifier": "t_contract$_NestDeposit_$594",
                               "typeString": "contract NestDeposit"
                             }
                           ],
@@ -5325,7 +5325,7 @@
                                 "referencedDeclaration": 4294967268,
                                 "src": "5401:4:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_NestDeposit_$591",
+                                  "typeIdentifier": "t_contract$_NestDeposit_$594",
                                   "typeString": "contract NestDeposit"
                                 }
                               }
@@ -5333,7 +5333,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_NestDeposit_$591",
+                                  "typeIdentifier": "t_contract$_NestDeposit_$594",
                                   "typeString": "contract NestDeposit"
                                 }
                               ],
@@ -5590,7 +5590,7 @@
               ],
               "src": "3911:9:0"
             },
-            "scope": 591,
+            "scope": 594,
             "src": "3767:1722:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -5598,9 +5598,9 @@
           },
           {
             "body": {
-              "id": 585,
+              "id": 588,
               "nodeType": "Block",
-              "src": "5609:1535:0",
+              "src": "5609:1557:0",
               "statements": [
                 {
                   "assignments": [
@@ -5614,7 +5614,7 @@
                       "name": "_cErc20Contract",
                       "nameLocation": "5695:15:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "5687:23:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -5689,7 +5689,7 @@
                       "name": "underlying",
                       "nameLocation": "5831:10:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "5825:16:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -5781,7 +5781,7 @@
                       "name": "cToken",
                       "nameLocation": "5961:6:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "5954:13:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -5873,7 +5873,7 @@
                       "name": "account",
                       "nameLocation": "6048:7:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6032:23:0",
                       "stateVariable": false,
                       "storageLocation": "storage",
@@ -5968,7 +5968,7 @@
                       "name": "exchangeRateMantissa",
                       "nameLocation": "6126:20:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6118:28:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -6050,7 +6050,7 @@
                       "name": "token",
                       "nameLocation": "6244:5:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6230:19:0",
                       "stateVariable": false,
                       "storageLocation": "storage",
@@ -6146,7 +6146,7 @@
                       "name": "underlyingAmount",
                       "nameLocation": "6341:16:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6333:24:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -6346,7 +6346,7 @@
                       "name": "interest",
                       "nameLocation": "6539:8:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6531:16:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -6440,7 +6440,7 @@
                       "name": "fees",
                       "nameLocation": "6600:4:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6592:12:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -6629,7 +6629,7 @@
                 },
                 {
                   "expression": {
-                    "id": 541,
+                    "id": 538,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6664,87 +6664,99 @@
                     "nodeType": "Assignment",
                     "operator": "-=",
                     "rightHandSide": {
-                      "components": [
-                        {
-                          "commonType": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          },
-                          "id": 539,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "leftExpression": {
-                            "id": 537,
-                            "name": "fees",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 521,
-                            "src": "6741:4:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "nodeType": "BinaryOperation",
-                          "operator": "+",
-                          "rightExpression": {
-                            "id": 538,
-                            "name": "amount",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 452,
-                            "src": "6748:6:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "src": "6741:13:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        }
-                      ],
-                      "id": 540,
-                      "isConstant": false,
-                      "isInlineArray": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "nodeType": "TupleExpression",
-                      "src": "6740:15:0",
+                      "id": 537,
+                      "name": "fees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 521,
+                      "src": "6740:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "6723:32:0",
+                    "src": "6723:21:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 542,
+                  "id": 539,
                   "nodeType": "ExpressionStatement",
-                  "src": "6723:32:0"
+                  "src": "6723:21:0"
+                },
+                {
+                  "expression": {
+                    "id": 544,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 540,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 493,
+                        "src": "6754:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Token_$152_storage_ptr",
+                          "typeString": "struct NestDeposit.Token storage pointer"
+                        }
+                      },
+                      "id": 542,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "deposit",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 151,
+                      "src": "6754:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "id": 543,
+                      "name": "amount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 452,
+                      "src": "6771:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "6754:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 545,
+                  "nodeType": "ExpressionStatement",
+                  "src": "6754:23:0"
                 },
                 {
                   "assignments": [
-                    545
+                    548
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 545,
+                      "id": 548,
                       "mutability": "mutable",
                       "name": "pool",
-                      "nameLocation": "6799:4:0",
+                      "nameLocation": "6821:4:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
-                      "src": "6786:17:0",
+                      "scope": 588,
+                      "src": "6808:17:0",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
@@ -6752,17 +6764,17 @@
                         "typeString": "struct NestDeposit.Pool"
                       },
                       "typeName": {
-                        "id": 544,
+                        "id": 547,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 543,
+                          "id": 546,
                           "name": "Pool",
                           "nodeType": "IdentifierPath",
                           "referencedDeclaration": 147,
-                          "src": "6786:4:0"
+                          "src": "6808:4:0"
                         },
                         "referencedDeclaration": 147,
-                        "src": "6786:4:0",
+                        "src": "6808:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Pool_$147_storage_ptr",
                           "typeString": "struct NestDeposit.Pool"
@@ -6771,28 +6783,28 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 549,
+                  "id": 552,
                   "initialValue": {
                     "baseExpression": {
-                      "id": 546,
+                      "id": 549,
                       "name": "pools",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 168,
-                      "src": "6806:5:0",
+                      "src": "6828:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Pool_$147_storage_$",
                         "typeString": "mapping(address => struct NestDeposit.Pool storage ref)"
                       }
                     },
-                    "id": 548,
+                    "id": 551,
                     "indexExpression": {
-                      "id": 547,
+                      "id": 550,
                       "name": "_erc20Contract",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 450,
-                      "src": "6812:14:0",
+                      "src": "6834:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -6803,14 +6815,14 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "6806:21:0",
+                    "src": "6828:21:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Pool_$147_storage",
                       "typeString": "struct NestDeposit.Pool storage ref"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "6786:41:0"
+                  "src": "6808:41:0"
                 },
                 {
                   "condition": {
@@ -6818,25 +6830,25 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 553,
+                    "id": 556,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "expression": {
-                        "id": 550,
+                        "id": 553,
                         "name": "pool",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 545,
-                        "src": "6841:4:0",
+                        "referencedDeclaration": 548,
+                        "src": "6863:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Pool_$147_storage_ptr",
                           "typeString": "struct NestDeposit.Pool storage pointer"
                         }
                       },
-                      "id": 551,
+                      "id": 554,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -6844,7 +6856,7 @@
                       "memberName": "balance",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 140,
-                      "src": "6841:12:0",
+                      "src": "6863:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -6853,53 +6865,53 @@
                     "nodeType": "BinaryOperation",
                     "operator": "<",
                     "rightExpression": {
-                      "id": 552,
+                      "id": 555,
                       "name": "amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 452,
-                      "src": "6856:6:0",
+                      "src": "6878:6:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "6841:21:0",
+                    "src": "6863:21:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 566,
+                  "id": 569,
                   "nodeType": "IfStatement",
-                  "src": "6838:145:0",
+                  "src": "6860:145:0",
                   "trueBody": {
-                    "id": 565,
+                    "id": 568,
                     "nodeType": "Block",
-                    "src": "6864:119:0",
+                    "src": "6886:119:0",
                     "statements": [
                       {
                         "expression": {
                           "arguments": [
                             {
-                              "id": 561,
+                              "id": 564,
                               "name": "_erc20Contract",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 450,
-                              "src": "6949:14:0",
+                              "src": "6971:14:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
                             {
-                              "id": 562,
+                              "id": 565,
                               "name": "amount",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 452,
-                              "src": "6965:6:0",
+                              "src": "6987:6:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -6922,14 +6934,14 @@
                                 {
                                   "arguments": [
                                     {
-                                      "id": 557,
+                                      "id": 560,
                                       "name": "this",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
                                       "referencedDeclaration": 4294967268,
-                                      "src": "6930:4:0",
+                                      "src": "6952:4:0",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_contract$_NestDeposit_$591",
+                                        "typeIdentifier": "t_contract$_NestDeposit_$594",
                                         "typeString": "contract NestDeposit"
                                       }
                                     }
@@ -6937,30 +6949,30 @@
                                   "expression": {
                                     "argumentTypes": [
                                       {
-                                        "typeIdentifier": "t_contract$_NestDeposit_$591",
+                                        "typeIdentifier": "t_contract$_NestDeposit_$594",
                                         "typeString": "contract NestDeposit"
                                       }
                                     ],
-                                    "id": 556,
+                                    "id": 559,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
                                     "lValueRequested": false,
                                     "nodeType": "ElementaryTypeNameExpression",
-                                    "src": "6922:7:0",
+                                    "src": "6944:7:0",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_type$_t_address_$",
                                       "typeString": "type(address)"
                                     },
                                     "typeName": {
-                                      "id": 555,
+                                      "id": 558,
                                       "name": "address",
                                       "nodeType": "ElementaryTypeName",
-                                      "src": "6922:7:0",
+                                      "src": "6944:7:0",
                                       "typeDescriptions": {}
                                     }
                                   },
-                                  "id": 558,
+                                  "id": 561,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -6968,7 +6980,7 @@
                                   "lValueRequested": false,
                                   "names": [],
                                   "nodeType": "FunctionCall",
-                                  "src": "6922:13:0",
+                                  "src": "6944:13:0",
                                   "tryCall": false,
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
@@ -6983,18 +6995,18 @@
                                     "typeString": "address"
                                   }
                                 ],
-                                "id": 554,
+                                "id": 557,
                                 "name": "IRecursive",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 128,
-                                "src": "6911:10:0",
+                                "src": "6933:10:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_contract$_IRecursive_$128_$",
                                   "typeString": "type(contract IRecursive)"
                                 }
                               },
-                              "id": 559,
+                              "id": 562,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -7002,14 +7014,14 @@
                               "lValueRequested": false,
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "6911:25:0",
+                              "src": "6933:25:0",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_IRecursive_$128",
                                 "typeString": "contract IRecursive"
                               }
                             },
-                            "id": 560,
+                            "id": 563,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -7017,13 +7029,13 @@
                             "memberName": "fillReserve",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 127,
-                            "src": "6911:37:0",
+                            "src": "6933:37:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                               "typeString": "function (address,uint256) external returns (bool)"
                             }
                           },
-                          "id": 563,
+                          "id": 566,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -7031,16 +7043,16 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "6911:61:0",
+                          "src": "6933:61:0",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           }
                         },
-                        "id": 564,
+                        "id": 567,
                         "nodeType": "ExpressionStatement",
-                        "src": "6911:61:0"
+                        "src": "6933:61:0"
                       }
                     ]
                   }
@@ -7050,37 +7062,37 @@
                     "arguments": [
                       {
                         "expression": {
-                          "id": 570,
+                          "id": 573,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 4294967281,
-                          "src": "7013:3:0",
+                          "src": "7035:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 571,
+                        "id": 574,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
-                        "src": "7013:10:0",
+                        "src": "7035:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 572,
+                        "id": 575,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 452,
-                        "src": "7025:6:0",
+                        "src": "7047:6:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -7099,18 +7111,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 567,
+                        "id": 570,
                         "name": "underlying",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 465,
-                        "src": "6993:10:0",
+                        "src": "7015:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_Erc20_$31",
                           "typeString": "contract Erc20"
                         }
                       },
-                      "id": 569,
+                      "id": 572,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -7118,13 +7130,13 @@
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 19,
-                      "src": "6993:19:0",
+                      "src": "7015:19:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                         "typeString": "function (address,uint256) external returns (bool)"
                       }
                     },
-                    "id": 573,
+                    "id": 576,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -7132,38 +7144,38 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "6993:39:0",
+                    "src": "7015:39:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 574,
+                  "id": 577,
                   "nodeType": "ExpressionStatement",
-                  "src": "6993:39:0"
+                  "src": "7015:39:0"
                 },
                 {
                   "expression": {
-                    "id": 581,
+                    "id": 584,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 575,
+                        "id": 578,
                         "name": "token",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 493,
-                        "src": "7071:5:0",
+                        "src": "7093:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Token_$152_storage_ptr",
                           "typeString": "struct NestDeposit.Token storage pointer"
                         }
                       },
-                      "id": 577,
+                      "id": 580,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -7171,7 +7183,7 @@
                       "memberName": "balance",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 149,
-                      "src": "7071:13:0",
+                      "src": "7093:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -7184,18 +7196,18 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 580,
+                      "id": 583,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
-                        "id": 578,
+                        "id": 581,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 452,
-                        "src": "7088:6:0",
+                        "src": "7110:6:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -7204,44 +7216,44 @@
                       "nodeType": "BinaryOperation",
                       "operator": "*",
                       "rightExpression": {
-                        "id": 579,
+                        "id": 582,
                         "name": "exchangeRateMantissa",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 486,
-                        "src": "7095:20:0",
+                        "src": "7117:20:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
-                      "src": "7088:27:0",
+                      "src": "7110:27:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "7071:44:0",
+                    "src": "7093:44:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 582,
+                  "id": 585,
                   "nodeType": "ExpressionStatement",
-                  "src": "7071:44:0"
+                  "src": "7093:44:0"
                 },
                 {
                   "expression": {
                     "hexValue": "74727565",
-                    "id": 583,
+                    "id": 586,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "bool",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "7133:4:0",
+                    "src": "7155:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -7249,14 +7261,14 @@
                     "value": "true"
                   },
                   "functionReturnParameters": 456,
-                  "id": 584,
+                  "id": 587,
                   "nodeType": "Return",
-                  "src": "7126:11:0"
+                  "src": "7148:11:0"
                 }
               ]
             },
             "functionSelector": "fcb8146e",
-            "id": 586,
+            "id": 589,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -7274,7 +7286,7 @@
                   "name": "_erc20Contract",
                   "nameLocation": "5542:14:0",
                   "nodeType": "VariableDeclaration",
-                  "scope": 586,
+                  "scope": 589,
                   "src": "5534:22:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7302,7 +7314,7 @@
                   "name": "amount",
                   "nameLocation": "5574:6:0",
                   "nodeType": "VariableDeclaration",
-                  "scope": 586,
+                  "scope": 589,
                   "src": "5566:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7336,7 +7348,7 @@
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 586,
+                  "scope": 589,
                   "src": "5603:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7359,20 +7371,20 @@
               ],
               "src": "5602:6:0"
             },
-            "scope": 591,
-            "src": "5496:1648:0",
+            "scope": 594,
+            "src": "5496:1670:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 589,
+              "id": 592,
               "nodeType": "Block",
-              "src": "7178:48:0",
+              "src": "7200:48:0",
               "statements": []
             },
-            "id": 590,
+            "id": 593,
             "implemented": true,
             "kind": "receive",
             "modifiers": [],
@@ -7380,30 +7392,30 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 587,
+              "id": 590,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "7158:2:0"
+              "src": "7180:2:0"
             },
             "returnParameters": {
-              "id": 588,
+              "id": 591,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "7178:0:0"
+              "src": "7200:0:0"
             },
-            "scope": 591,
-            "src": "7151:75:0",
+            "scope": 594,
+            "src": "7173:75:0",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 592,
-        "src": "1273:5955:0",
+        "scope": 595,
+        "src": "1273:5977:0",
         "usedErrors": []
       }
     ],
-    "src": "0:7228:0"
+    "src": "0:7250:0"
   },
   "legacyAST": {
     "absolutePath": "project:/contracts/NestDeposit.sol",
@@ -7421,10 +7433,10 @@
         128
       ],
       "NestDeposit": [
-        591
+        594
       ]
     },
-    "id": 592,
+    "id": 595,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -7817,7 +7829,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 592,
+        "scope": 595,
         "src": "34:228:0",
         "usedErrors": []
       },
@@ -8417,7 +8429,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 592,
+        "scope": 595,
         "src": "263:447:0",
         "usedErrors": []
       },
@@ -8739,7 +8751,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 592,
+        "scope": 595,
         "src": "711:297:0",
         "usedErrors": []
       },
@@ -8981,7 +8993,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 592,
+        "scope": 595,
         "src": "1012:258:0",
         "usedErrors": []
       },
@@ -9004,9 +9016,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 591,
+        "id": 594,
         "linearizedBaseContracts": [
-          591,
+          594,
           128
         ],
         "name": "NestDeposit",
@@ -9020,7 +9032,7 @@
             "name": "nameNumberParameters",
             "nameLocation": "1351:20:0",
             "nodeType": "VariableDeclaration",
-            "scope": 591,
+            "scope": 594,
             "src": "1314:57:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -9066,7 +9078,7 @@
             "name": "addressNumberParameters",
             "nameLocation": "1414:23:0",
             "nodeType": "VariableDeclaration",
-            "scope": 591,
+            "scope": 594,
             "src": "1377:60:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -9221,7 +9233,7 @@
             "name": "Pool",
             "nameLocation": "1451:4:0",
             "nodeType": "StructDefinition",
-            "scope": 591,
+            "scope": 594,
             "src": "1444:132:0",
             "visibility": "public"
           },
@@ -9287,7 +9299,7 @@
             "name": "Token",
             "nameLocation": "1589:5:0",
             "nodeType": "StructDefinition",
-            "scope": 591,
+            "scope": 594,
             "src": "1582:70:0",
             "visibility": "public"
           },
@@ -9352,7 +9364,7 @@
             "name": "Account",
             "nameLocation": "1665:7:0",
             "nodeType": "StructDefinition",
-            "scope": 591,
+            "scope": 594,
             "src": "1658:64:0",
             "visibility": "public"
           },
@@ -9363,7 +9375,7 @@
             "name": "accounts",
             "nameLocation": "1765:8:0",
             "nodeType": "VariableDeclaration",
-            "scope": 591,
+            "scope": 594,
             "src": "1728:45:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -9416,7 +9428,7 @@
             "name": "pools",
             "nameLocation": "1814:5:0",
             "nodeType": "VariableDeclaration",
-            "scope": 591,
+            "scope": 594,
             "src": "1780:39:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -9469,7 +9481,7 @@
             "name": "marketPairs",
             "nameLocation": "1863:11:0",
             "nodeType": "VariableDeclaration",
-            "scope": 591,
+            "scope": 594,
             "src": "1826:48:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -10113,7 +10125,7 @@
               ],
               "src": "2168:6:0"
             },
-            "scope": 591,
+            "scope": 594,
             "src": "2085:199:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -10262,7 +10274,7 @@
               ],
               "src": "2362:9:0"
             },
-            "scope": 591,
+            "scope": 594,
             "src": "2290:134:0",
             "stateMutability": "view",
             "virtual": false,
@@ -11096,7 +11108,7 @@
               ],
               "src": "2545:6:0"
             },
-            "scope": 591,
+            "scope": 594,
             "src": "2430:763:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -11563,7 +11575,7 @@
               ],
               "src": "3314:6:0"
             },
-            "scope": 591,
+            "scope": 594,
             "src": "3202:560:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -12291,7 +12303,7 @@
                             "referencedDeclaration": 4294967268,
                             "src": "5109:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_NestDeposit_$591",
+                              "typeIdentifier": "t_contract$_NestDeposit_$594",
                               "typeString": "contract NestDeposit"
                             }
                           }
@@ -12299,7 +12311,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_NestDeposit_$591",
+                              "typeIdentifier": "t_contract$_NestDeposit_$594",
                               "typeString": "contract NestDeposit"
                             }
                           ],
@@ -12587,7 +12599,7 @@
                                 "referencedDeclaration": 4294967268,
                                 "src": "5401:4:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_NestDeposit_$591",
+                                  "typeIdentifier": "t_contract$_NestDeposit_$594",
                                   "typeString": "contract NestDeposit"
                                 }
                               }
@@ -12595,7 +12607,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_NestDeposit_$591",
+                                  "typeIdentifier": "t_contract$_NestDeposit_$594",
                                   "typeString": "contract NestDeposit"
                                 }
                               ],
@@ -12852,7 +12864,7 @@
               ],
               "src": "3911:9:0"
             },
-            "scope": 591,
+            "scope": 594,
             "src": "3767:1722:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -12860,9 +12872,9 @@
           },
           {
             "body": {
-              "id": 585,
+              "id": 588,
               "nodeType": "Block",
-              "src": "5609:1535:0",
+              "src": "5609:1557:0",
               "statements": [
                 {
                   "assignments": [
@@ -12876,7 +12888,7 @@
                       "name": "_cErc20Contract",
                       "nameLocation": "5695:15:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "5687:23:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -12951,7 +12963,7 @@
                       "name": "underlying",
                       "nameLocation": "5831:10:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "5825:16:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -13043,7 +13055,7 @@
                       "name": "cToken",
                       "nameLocation": "5961:6:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "5954:13:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -13135,7 +13147,7 @@
                       "name": "account",
                       "nameLocation": "6048:7:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6032:23:0",
                       "stateVariable": false,
                       "storageLocation": "storage",
@@ -13230,7 +13242,7 @@
                       "name": "exchangeRateMantissa",
                       "nameLocation": "6126:20:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6118:28:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -13312,7 +13324,7 @@
                       "name": "token",
                       "nameLocation": "6244:5:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6230:19:0",
                       "stateVariable": false,
                       "storageLocation": "storage",
@@ -13408,7 +13420,7 @@
                       "name": "underlyingAmount",
                       "nameLocation": "6341:16:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6333:24:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -13608,7 +13620,7 @@
                       "name": "interest",
                       "nameLocation": "6539:8:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6531:16:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -13702,7 +13714,7 @@
                       "name": "fees",
                       "nameLocation": "6600:4:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
+                      "scope": 588,
                       "src": "6592:12:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -13891,7 +13903,7 @@
                 },
                 {
                   "expression": {
-                    "id": 541,
+                    "id": 538,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -13926,87 +13938,99 @@
                     "nodeType": "Assignment",
                     "operator": "-=",
                     "rightHandSide": {
-                      "components": [
-                        {
-                          "commonType": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          },
-                          "id": 539,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "leftExpression": {
-                            "id": 537,
-                            "name": "fees",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 521,
-                            "src": "6741:4:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "nodeType": "BinaryOperation",
-                          "operator": "+",
-                          "rightExpression": {
-                            "id": 538,
-                            "name": "amount",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 452,
-                            "src": "6748:6:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "src": "6741:13:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        }
-                      ],
-                      "id": 540,
-                      "isConstant": false,
-                      "isInlineArray": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "nodeType": "TupleExpression",
-                      "src": "6740:15:0",
+                      "id": 537,
+                      "name": "fees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 521,
+                      "src": "6740:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "6723:32:0",
+                    "src": "6723:21:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 542,
+                  "id": 539,
                   "nodeType": "ExpressionStatement",
-                  "src": "6723:32:0"
+                  "src": "6723:21:0"
+                },
+                {
+                  "expression": {
+                    "id": 544,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 540,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 493,
+                        "src": "6754:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Token_$152_storage_ptr",
+                          "typeString": "struct NestDeposit.Token storage pointer"
+                        }
+                      },
+                      "id": 542,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "deposit",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 151,
+                      "src": "6754:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "id": 543,
+                      "name": "amount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 452,
+                      "src": "6771:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "6754:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 545,
+                  "nodeType": "ExpressionStatement",
+                  "src": "6754:23:0"
                 },
                 {
                   "assignments": [
-                    545
+                    548
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 545,
+                      "id": 548,
                       "mutability": "mutable",
                       "name": "pool",
-                      "nameLocation": "6799:4:0",
+                      "nameLocation": "6821:4:0",
                       "nodeType": "VariableDeclaration",
-                      "scope": 585,
-                      "src": "6786:17:0",
+                      "scope": 588,
+                      "src": "6808:17:0",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
@@ -14014,17 +14038,17 @@
                         "typeString": "struct NestDeposit.Pool"
                       },
                       "typeName": {
-                        "id": 544,
+                        "id": 547,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 543,
+                          "id": 546,
                           "name": "Pool",
                           "nodeType": "IdentifierPath",
                           "referencedDeclaration": 147,
-                          "src": "6786:4:0"
+                          "src": "6808:4:0"
                         },
                         "referencedDeclaration": 147,
-                        "src": "6786:4:0",
+                        "src": "6808:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Pool_$147_storage_ptr",
                           "typeString": "struct NestDeposit.Pool"
@@ -14033,28 +14057,28 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 549,
+                  "id": 552,
                   "initialValue": {
                     "baseExpression": {
-                      "id": 546,
+                      "id": 549,
                       "name": "pools",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 168,
-                      "src": "6806:5:0",
+                      "src": "6828:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Pool_$147_storage_$",
                         "typeString": "mapping(address => struct NestDeposit.Pool storage ref)"
                       }
                     },
-                    "id": 548,
+                    "id": 551,
                     "indexExpression": {
-                      "id": 547,
+                      "id": 550,
                       "name": "_erc20Contract",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 450,
-                      "src": "6812:14:0",
+                      "src": "6834:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -14065,14 +14089,14 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "6806:21:0",
+                    "src": "6828:21:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Pool_$147_storage",
                       "typeString": "struct NestDeposit.Pool storage ref"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "6786:41:0"
+                  "src": "6808:41:0"
                 },
                 {
                   "condition": {
@@ -14080,25 +14104,25 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 553,
+                    "id": 556,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "expression": {
-                        "id": 550,
+                        "id": 553,
                         "name": "pool",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 545,
-                        "src": "6841:4:0",
+                        "referencedDeclaration": 548,
+                        "src": "6863:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Pool_$147_storage_ptr",
                           "typeString": "struct NestDeposit.Pool storage pointer"
                         }
                       },
-                      "id": 551,
+                      "id": 554,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -14106,7 +14130,7 @@
                       "memberName": "balance",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 140,
-                      "src": "6841:12:0",
+                      "src": "6863:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -14115,53 +14139,53 @@
                     "nodeType": "BinaryOperation",
                     "operator": "<",
                     "rightExpression": {
-                      "id": 552,
+                      "id": 555,
                       "name": "amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 452,
-                      "src": "6856:6:0",
+                      "src": "6878:6:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "6841:21:0",
+                    "src": "6863:21:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 566,
+                  "id": 569,
                   "nodeType": "IfStatement",
-                  "src": "6838:145:0",
+                  "src": "6860:145:0",
                   "trueBody": {
-                    "id": 565,
+                    "id": 568,
                     "nodeType": "Block",
-                    "src": "6864:119:0",
+                    "src": "6886:119:0",
                     "statements": [
                       {
                         "expression": {
                           "arguments": [
                             {
-                              "id": 561,
+                              "id": 564,
                               "name": "_erc20Contract",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 450,
-                              "src": "6949:14:0",
+                              "src": "6971:14:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
                             {
-                              "id": 562,
+                              "id": 565,
                               "name": "amount",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 452,
-                              "src": "6965:6:0",
+                              "src": "6987:6:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -14184,14 +14208,14 @@
                                 {
                                   "arguments": [
                                     {
-                                      "id": 557,
+                                      "id": 560,
                                       "name": "this",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
                                       "referencedDeclaration": 4294967268,
-                                      "src": "6930:4:0",
+                                      "src": "6952:4:0",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_contract$_NestDeposit_$591",
+                                        "typeIdentifier": "t_contract$_NestDeposit_$594",
                                         "typeString": "contract NestDeposit"
                                       }
                                     }
@@ -14199,30 +14223,30 @@
                                   "expression": {
                                     "argumentTypes": [
                                       {
-                                        "typeIdentifier": "t_contract$_NestDeposit_$591",
+                                        "typeIdentifier": "t_contract$_NestDeposit_$594",
                                         "typeString": "contract NestDeposit"
                                       }
                                     ],
-                                    "id": 556,
+                                    "id": 559,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
                                     "lValueRequested": false,
                                     "nodeType": "ElementaryTypeNameExpression",
-                                    "src": "6922:7:0",
+                                    "src": "6944:7:0",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_type$_t_address_$",
                                       "typeString": "type(address)"
                                     },
                                     "typeName": {
-                                      "id": 555,
+                                      "id": 558,
                                       "name": "address",
                                       "nodeType": "ElementaryTypeName",
-                                      "src": "6922:7:0",
+                                      "src": "6944:7:0",
                                       "typeDescriptions": {}
                                     }
                                   },
-                                  "id": 558,
+                                  "id": 561,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -14230,7 +14254,7 @@
                                   "lValueRequested": false,
                                   "names": [],
                                   "nodeType": "FunctionCall",
-                                  "src": "6922:13:0",
+                                  "src": "6944:13:0",
                                   "tryCall": false,
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
@@ -14245,18 +14269,18 @@
                                     "typeString": "address"
                                   }
                                 ],
-                                "id": 554,
+                                "id": 557,
                                 "name": "IRecursive",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 128,
-                                "src": "6911:10:0",
+                                "src": "6933:10:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_contract$_IRecursive_$128_$",
                                   "typeString": "type(contract IRecursive)"
                                 }
                               },
-                              "id": 559,
+                              "id": 562,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -14264,14 +14288,14 @@
                               "lValueRequested": false,
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "6911:25:0",
+                              "src": "6933:25:0",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_IRecursive_$128",
                                 "typeString": "contract IRecursive"
                               }
                             },
-                            "id": 560,
+                            "id": 563,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -14279,13 +14303,13 @@
                             "memberName": "fillReserve",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 127,
-                            "src": "6911:37:0",
+                            "src": "6933:37:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                               "typeString": "function (address,uint256) external returns (bool)"
                             }
                           },
-                          "id": 563,
+                          "id": 566,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -14293,16 +14317,16 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "6911:61:0",
+                          "src": "6933:61:0",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           }
                         },
-                        "id": 564,
+                        "id": 567,
                         "nodeType": "ExpressionStatement",
-                        "src": "6911:61:0"
+                        "src": "6933:61:0"
                       }
                     ]
                   }
@@ -14312,37 +14336,37 @@
                     "arguments": [
                       {
                         "expression": {
-                          "id": 570,
+                          "id": 573,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 4294967281,
-                          "src": "7013:3:0",
+                          "src": "7035:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 571,
+                        "id": 574,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
-                        "src": "7013:10:0",
+                        "src": "7035:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 572,
+                        "id": 575,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 452,
-                        "src": "7025:6:0",
+                        "src": "7047:6:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -14361,18 +14385,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 567,
+                        "id": 570,
                         "name": "underlying",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 465,
-                        "src": "6993:10:0",
+                        "src": "7015:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_Erc20_$31",
                           "typeString": "contract Erc20"
                         }
                       },
-                      "id": 569,
+                      "id": 572,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -14380,13 +14404,13 @@
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 19,
-                      "src": "6993:19:0",
+                      "src": "7015:19:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                         "typeString": "function (address,uint256) external returns (bool)"
                       }
                     },
-                    "id": 573,
+                    "id": 576,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -14394,38 +14418,38 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "6993:39:0",
+                    "src": "7015:39:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 574,
+                  "id": 577,
                   "nodeType": "ExpressionStatement",
-                  "src": "6993:39:0"
+                  "src": "7015:39:0"
                 },
                 {
                   "expression": {
-                    "id": 581,
+                    "id": 584,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 575,
+                        "id": 578,
                         "name": "token",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 493,
-                        "src": "7071:5:0",
+                        "src": "7093:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Token_$152_storage_ptr",
                           "typeString": "struct NestDeposit.Token storage pointer"
                         }
                       },
-                      "id": 577,
+                      "id": 580,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -14433,7 +14457,7 @@
                       "memberName": "balance",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 149,
-                      "src": "7071:13:0",
+                      "src": "7093:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -14446,18 +14470,18 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 580,
+                      "id": 583,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
-                        "id": 578,
+                        "id": 581,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 452,
-                        "src": "7088:6:0",
+                        "src": "7110:6:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -14466,44 +14490,44 @@
                       "nodeType": "BinaryOperation",
                       "operator": "*",
                       "rightExpression": {
-                        "id": 579,
+                        "id": 582,
                         "name": "exchangeRateMantissa",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 486,
-                        "src": "7095:20:0",
+                        "src": "7117:20:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
-                      "src": "7088:27:0",
+                      "src": "7110:27:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "7071:44:0",
+                    "src": "7093:44:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 582,
+                  "id": 585,
                   "nodeType": "ExpressionStatement",
-                  "src": "7071:44:0"
+                  "src": "7093:44:0"
                 },
                 {
                   "expression": {
                     "hexValue": "74727565",
-                    "id": 583,
+                    "id": 586,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "bool",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "7133:4:0",
+                    "src": "7155:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -14511,14 +14535,14 @@
                     "value": "true"
                   },
                   "functionReturnParameters": 456,
-                  "id": 584,
+                  "id": 587,
                   "nodeType": "Return",
-                  "src": "7126:11:0"
+                  "src": "7148:11:0"
                 }
               ]
             },
             "functionSelector": "fcb8146e",
-            "id": 586,
+            "id": 589,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -14536,7 +14560,7 @@
                   "name": "_erc20Contract",
                   "nameLocation": "5542:14:0",
                   "nodeType": "VariableDeclaration",
-                  "scope": 586,
+                  "scope": 589,
                   "src": "5534:22:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -14564,7 +14588,7 @@
                   "name": "amount",
                   "nameLocation": "5574:6:0",
                   "nodeType": "VariableDeclaration",
-                  "scope": 586,
+                  "scope": 589,
                   "src": "5566:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -14598,7 +14622,7 @@
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 586,
+                  "scope": 589,
                   "src": "5603:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -14621,20 +14645,20 @@
               ],
               "src": "5602:6:0"
             },
-            "scope": 591,
-            "src": "5496:1648:0",
+            "scope": 594,
+            "src": "5496:1670:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 589,
+              "id": 592,
               "nodeType": "Block",
-              "src": "7178:48:0",
+              "src": "7200:48:0",
               "statements": []
             },
-            "id": 590,
+            "id": 593,
             "implemented": true,
             "kind": "receive",
             "modifiers": [],
@@ -14642,30 +14666,30 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 587,
+              "id": 590,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "7158:2:0"
+              "src": "7180:2:0"
             },
             "returnParameters": {
-              "id": 588,
+              "id": 591,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "7178:0:0"
+              "src": "7200:0:0"
             },
-            "scope": 591,
-            "src": "7151:75:0",
+            "scope": 594,
+            "src": "7173:75:0",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 592,
-        "src": "1273:5955:0",
+        "scope": 595,
+        "src": "1273:5977:0",
         "usedErrors": []
       }
     ],
-    "src": "0:7228:0"
+    "src": "0:7250:0"
   },
   "compiler": {
     "name": "solc",
@@ -14673,7 +14697,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-12-03T14:57:50.210Z",
+  "updatedAt": "2021-12-08T13:40:50.096Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
