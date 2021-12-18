@@ -8,10 +8,7 @@ const Withdraw = () => {
     return (
       <Layout>
         <h4>Withdraw</h4>
-        { RinkebyAddresses.map((a) => {
-            return <MarketItem key={a.name} deposit="false" address={a}/>
-        })
-        }
+          <MarketItem deposit="false"/>
       </Layout>  
     )
 }

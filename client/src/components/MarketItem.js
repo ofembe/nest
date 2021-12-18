@@ -2,10 +2,17 @@ import React, {useState} from "react";
 import BigNumber from "bignumber.js";
 import Erc20 from "../contracts/Erc20.json";
 import useEthereumAccounts from "../hooks/useEthereumAccounts";
+import {CurrencySelect} from "./CurrencySelect";
 
 
-export const MarketItem = ({address, deposit}) => {
+export const MarketItem = ({deposit}) => {
   const {web3, accounts, contract} = useEthereumAccounts();
+  const [market, setMarket] = useState();
+  const [address, setAddress] = useState();
+
+  const setNewAddress = () => {
+
+  }
     const [value, setValue] = useState(0.000);
     const submit = () => {
       if(deposit) {
@@ -49,19 +56,22 @@ export const MarketItem = ({address, deposit}) => {
           }  
     };
 
-    if(address.token === false) {
+    if(address?.token === false) {
         return null;
     }
 
     return (
       <div className="mt-2">
       <form>
+      <div style={{maxWidth: 300}} class="form-group">
+        <CurrencySelect submit={setMarket}/>
+      </div>
         <div class="form-group">
           <label for="amount">
           <div className="d-inline-block">
             <img height="20" src="https://avatars.githubusercontent.com/u/32911405?s=200&v=4"/>
           </div>
-            <span>Amount({address.name})</span>
+            <span>Amount</span>
             </label>
           <input style={{maxWidth: 300}} id="amount" class="form-control" onChange={(e) => {setValue(e.target.value)}} placeholder="0.000" type="number"/>
         </div>

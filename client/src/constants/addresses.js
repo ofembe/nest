@@ -10,5 +10,6 @@
 
 export const RinkebyAddresses = [
     {name: "USDC", address: "0x5b281a6dda0b271e91ae35de655ad301c976edb1", token: true, ercAddress: "0x4DBCdF9B62e891a7cec5A2568C3F4FAF9E8Abe2b" , decimals: 18 },
+    {name: "DAI", address: "0x6D7F0754FFeb405d23C51CE938289d4835bE3b14", token: true, ercAddress: "0x5592EC0cfb4dbc12D3aB100b257153436a1f0FEa" , decimals: 18 },
 ]
 

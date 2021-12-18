@@ -214,11 +214,11 @@ contract NestDeposit is IRecursive {
         require(underlyingAmount > amount, "You don't have enough funds");
 
         // Calculate interest and subtract fees
-        uint256 interest = underlyingAmount - token.deposit;
-        uint256 fees = (amount/token.deposit)*interest*nameNumberParameters["feePercent"];
+        // uint256 interest = underlyingAmount - token.deposit;
+        // uint256 fees = (amount/token.deposit)*interest*nameNumberParameters["feePercent"];
 
         // Subtract erc token and fees
-        token.deposit -= fees;
+        // token.deposit -= fees;
         token.deposit -= amount;
 
         // Get pool

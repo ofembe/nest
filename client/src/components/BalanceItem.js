@@ -1,20 +1,34 @@
 import React, {useState} from "react";
 
 export const BalanceItem = ({token}) => {
-    return <div className="row">
-    <div className="col-xs-12 col-2 mt-2 mb-2">
-      <img width="20" src="https://avatars.githubusercontent.com/u/32911405?s=200&v=4" />
-      {token?.address &&
-      <span>{token?.name}</span> ||
-      <span>Ether</span> 
-      }
+    return <div class="nk-sidebar-widget d-xl-block">
+    <div class="user-account-info between-center">
+        <div class="user-account-main">
+            <h6 class="overline-title-alt">Available Balance</h6>
+            <div class="user-balance">2.014095 <small class="currency currency-btc">BTC</small></div>
+            <div class="user-balance-alt">18,934.84 <span class="currency currency-btc">BTC</span></div>
+        </div>
+        <a href="#" class="btn btn-white btn-icon btn-light"><em class="icon ni ni-line-chart"></em></a>
     </div>
-    <div className="col-xs-12 col-2 m-1 font-weight-bold">
-        <button className="btn btn-secondary">Check</button>
-    </div>
-    <div className="col-xs-12 col m-1 font-weight-bold">
-        {Math.random()* 10000} (Profit: {Math.random()* 10})
-    </div>
-    </div>
+    <ul class="user-account-data gy-1">
+        <li>
+            <div class="user-account-label">
+                <span class="sub-text">Profits (7d)</span>
+            </div>
+            <div class="user-account-value">
+                <span class="lead-text">+ 0.0526 <span class="currency currency-btc">BTC</span></span>
+                <span class="text-success ml-2">3.1% <em class="icon ni ni-arrow-long-up"></em></span>
+            </div>
+        </li>
+        <li>
+            <div class="user-account-label">
+                <span class="sub-text">Deposit in orders</span>
+            </div>
+            <div class="user-account-value">
+                <span class="sub-text">0.005400 <span class="currency currency-btc">BTC</span></span>
+            </div>
+        </li>
+    </ul>
+</div>
 }
 

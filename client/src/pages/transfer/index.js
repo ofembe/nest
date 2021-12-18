@@ -110,10 +110,7 @@ class Transfer extends Component {
     return (
       <Layout>
         <h4>Transfer</h4>
-        { RinkebyAddresses.map((a) => {
-            return <TransferItem key={a.name} submit={this.update} token={a}/>
-        })
-        }
+          <TransferItem/>
     </Layout>  
     )
 
