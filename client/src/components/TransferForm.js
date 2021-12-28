@@ -2,14 +2,14 @@ import React, {useState} from "react";
 import {CurrencySelect} from "./CurrencySelect";
 import { AccountSelect } from "./AccountSelect";
 
-export const TransferForm = ({submit, token}) => {
+export const TransferForm = ({onSubmit}) => {
     const [market, setMarket] = useState();
     const [value, setValue] = useState(0.000);
     const [address, setAddress] = useState("");
     const [account, setAccount] = useState("");
     
     const send = (e) => {
-        submit(address, value, token?.address);
+        onSubmit(account, market, address, value);
         setValue(0);
     }
 
@@ -31,7 +31,7 @@ return (
       </div>
   <div style={{maxWidth: 300}} class="form-group">
         <label className="form-label">
-            <span>Market</span>
+            <span>Currency</span>
           </label>
         <CurrencySelect submit={setMarket}/>
       </div>

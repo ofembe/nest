@@ -7,7 +7,7 @@ export const CurrencySelect = ({submit}) => {
       <Select
         placeholder="Select Market"
         onChange={submit} options={RinkebyAddresses.map(address=> {
-        return { value: address.address, label: address.name };
+        return { value: address, label: address.name };
       })} />
   ) 
 }
