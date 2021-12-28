@@ -9,7 +9,8 @@ import Layout from "../../parts/Layout";
 
 import "../../App.scss";
 import { RinkebyAddresses } from "../../constants/addresses";
-import { TransferItem } from "../../components/TransferItem";
+import { WithdrawForm } from "../../components/WithdrawForm";
+import { TransferForm } from "../../components/TransferForm";
 
 class Transfer extends Component {
   state = { deposits: [], storageValue: 0, web3: null, accounts: null, contract: null };
@@ -110,7 +111,7 @@ class Transfer extends Component {
     return (
       <Layout>
         <h4>Transfer</h4>
-          <TransferItem/>
+          <TransferForm/>
     </Layout>  
     )
 

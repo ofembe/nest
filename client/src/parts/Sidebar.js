@@ -98,7 +98,13 @@ const Sidebar = () => {
                         <li class={`nk-menu-item ${location.pathname === '/deposits'?"active": ""}`}>
                                 <Link to="/deposits" class="nk-menu-link">
                                 <span class="nk-menu-icon"><em class="icon ni ni-plus"></em></span>
-                                    <span className="nk-menu-text">Deposit</span>
+                                    <span className="nk-menu-text">Save</span>
+                                </Link>
+                        </li>
+                        <li class={`nk-menu-item ${location.pathname === '/investments'?"active": ""}`}>
+                                <Link to="/investments" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-swap-alt"></em></span>
+                                    <span className="nk-menu-text">Invest</span>
                                 </Link>
                         </li>
                         <li class={`nk-menu-item ${location.pathname === '/withdrawals'?"active": ""}`}>

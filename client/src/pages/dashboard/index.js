@@ -1,9 +1,6 @@
 import React from "react";
 import { BalanceItem } from "../../components/BalanceItem";
-import { TransferItem } from "../../components/TransferItem";
 import Layout from "../../parts/Layout";
-import Sidebar from "../../parts/Sidebar";
-import Sample from "../sample";
 import { RinkebyAddresses } from "../../constants/addresses";
 
 const Dashboard = () => {

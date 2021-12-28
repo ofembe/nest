@@ -5,7 +5,7 @@ import useEthereumAccounts from "../hooks/useEthereumAccounts";
 import {CurrencySelect} from "./CurrencySelect";
 
 
-export const MarketItem = ({deposit}) => {
+export const SaveForm = () => {
   const {web3, accounts, contract} = useEthereumAccounts();
   const [market, setMarket] = useState();
   const [address, setAddress] = useState();
@@ -15,11 +15,8 @@ export const MarketItem = ({deposit}) => {
   }
     const [value, setValue] = useState(0.000);
     const submit = () => {
-      if(deposit) {
         depositFunds();
-      } else {
-        withdraw();
-      }
+        // withdraw();
     }
 
     const depositFunds = async () => {
@@ -64,19 +61,19 @@ export const MarketItem = ({deposit}) => {
       <div className="mt-2">
       <form>
       <div style={{maxWidth: 300}} class="form-group">
+        <label className="form-label">
+          <span>Market</span>
+        </label>
         <CurrencySelect submit={setMarket}/>
       </div>
         <div class="form-group">
-          <label for="amount">
-          <div className="d-inline-block">
-            <img height="20" src="https://avatars.githubusercontent.com/u/32911405?s=200&v=4"/>
-          </div>
+          <label for="amount" className="form-label">
             <span>Amount</span>
             </label>
           <input style={{maxWidth: 300}} id="amount" class="form-control" onChange={(e) => {setValue(e.target.value)}} placeholder="0.000" type="number"/>
         </div>
         <div class="form-group">
-            <button type="button" className="btn btn-primary" onClick={submit}>Confirm</button>
+            <button disabled={!market || !value} type="button" className="btn btn-primary" onClick={submit}>Confirm</button>
         </div>
   </form>
   </div>)

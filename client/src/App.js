@@ -7,12 +7,10 @@ import {
 
 import "./App.scss";
 import Dashboard from "./pages/dashboard";
-import Balance from "./pages/invest/Balance";
-import Deposit from "./pages/invest/Deposit";
+import Invest from "./pages/invest/Invest";
+import Deposit from "./pages/invest/Save";
 import Withdraw from "./pages/invest/Withdraw";
-import Sample from "./pages/sample";
 import Transfer from "./pages/transfer";
-import Layout from "./parts/Layout";
 
 
 const App = () => {
@@ -25,6 +23,7 @@ const App = () => {
           <Route path="transfers" element={<Transfer />} />
           <Route path="deposits" element={<Deposit />} />
           <Route path="withdrawals" element={<Withdraw />} />
+          <Route path="investments" element={<Invest />} />
       </Routes>
     </BrowserRouter>
     
