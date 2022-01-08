@@ -34,8 +34,6 @@ interface CEth {
     function redeemUnderlying(uint) external returns (uint);
 }
 
-
-
 interface IRecursive {
     function updateReserve(
         address _erc20Contract,
@@ -48,8 +46,7 @@ interface IRecursive {
 
 
 contract NestDeposit is IRecursive {
-    mapping(bytes32 => uint256) internal nameNumberParameters;
-    mapping(address => uint256) internal addressNumberParameters;
+    address owner = msg.sender;
 
     struct Pool {
         uint256 balance;
@@ -73,12 +70,18 @@ contract NestDeposit is IRecursive {
 
     mapping(address => address) internal marketPairs;
 
+    mapping(address => uint) internal feeRate;
+
     event MyLog(string, uint256);
 
     event DepositMade(address pool, address cerc20, address from, uint256 amount);
 
     event WithdrawalMade(address pool, address cerc20, address to, uint256 amount);
 
+    modifier onlyOwner{
+        require(msg.sender == owner, "Only owner allowed");
+        _;
+    }
     function setPoolReserveMin(address _erc20Contract, uint256 amount) external returns(bool){
         Pool storage pool = pools[_erc20Contract];
         pool.reserve = amount;
@@ -112,10 +115,9 @@ contract NestDeposit is IRecursive {
 
         return true;
     }
-
-       function fillReserve(
-            address _erc20Contract,
-            uint256 amount) external override returns (bool) {
+    function fillReserve(
+        address _erc20Contract,
+        uint256 amount) external override returns (bool) {
 
         // Get valid cERC20 address from previous succesful deposit
         address _cErc20Contract = marketPairs[_erc20Contract];
@@ -133,11 +135,12 @@ contract NestDeposit is IRecursive {
     }
     function depositErc20(
         address _erc20Contract,
-        address _cErc20Contract,
         uint256 _numTokensToSupply
     ) public returns (uint256) {        
         // Create a reference to the underlying asset contract, like DAI.
         Erc20 underlying = Erc20(_erc20Contract);
+
+        address _cErc20Contract = marketPairs[_erc20Contract];
 
         // Create a reference to the corresponding cToken contract, like cDAI
         CErc20 cToken = CErc20(_cErc20Contract);
@@ -145,21 +148,14 @@ contract NestDeposit is IRecursive {
         // Get exchange rate
         uint256 exchangeRateMantissa = cToken.exchangeRateCurrent();
 
-        // Approve transfer on the ERC20 contract
-        // underlying.approve(_cErc20Contract, _numTokensToSupply);
-
-        //  Record tokens
         // Get user account
         Account storage account = accounts[msg.sender];
 
         // Save deposit
         Token storage token = account.tokens[_erc20Contract];
 
-        // Calculate interest
-
         // Save amount being deposited
         token.deposit += _numTokensToSupply;
-
     
         // Calculate cToken value
         uint256 mintResult = _numTokensToSupply*exchangeRateMantissa;
@@ -167,17 +163,11 @@ contract NestDeposit is IRecursive {
         // Update pool balance
         pools[_erc20Contract].balance += _numTokensToSupply;
 
-        // Check allowance
-        // underlying.allowance(address(this), address(this));
-
         // Give this contract the ERC20 Tokens
         underlying.transferFrom(msg.sender, address(this), _numTokensToSupply);
 
         // Calculate current balance  and add new balance to it
         token.balance += mintResult;
-
-        // Save valid Erc20 to cErc20 pair
-        marketPairs[_erc20Contract] = _cErc20Contract;
 
         // Check if we should mint
         IRecursive(address(this)).updateReserve(_erc20Contract, _cErc20Contract);
@@ -237,7 +227,21 @@ contract NestDeposit is IRecursive {
         return true;
     }
 
-     receive() external payable {
-            // React to receiving ether
+    function setMarketPair(address erc, address market) external onlyOwner returns (bool) {
+        marketPairs[erc] = market;
+        return true;
+    }
+
+    function setFeeRate(address erc, uint fee) external onlyOwner returns (bool) {
+        feeRate[erc] = fee;
+        return true;
+    }
+
+    function changeOwner() external onlyOwner returns (bool) {
+        owner = msg.sender;
+        return true;
+    }
+
+     fallback() external {
      }
 }
