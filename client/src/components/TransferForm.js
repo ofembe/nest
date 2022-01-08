@@ -6,10 +6,10 @@ export const TransferForm = ({onSubmit}) => {
     const [market, setMarket] = useState();
     const [value, setValue] = useState(0.000);
     const [address, setAddress] = useState("");
-    const [account, setAccount] = useState("");
+    // const [account, setAccount] = useState("");
     
     const send = (e) => {
-        onSubmit(account, market, address, value);
+        onSubmit(market, address, value);
         setValue(0);
     }
 
@@ -23,12 +23,12 @@ return (
         </label>
         <input id="address" className="form-control" style={{maxWidth: 300}} onChange={(e) => {setAddress(e.target.value)}} placeholder="Address" type="string"/>
     </div>
-  <div style={{maxWidth: 300}} className="form-group">
+  {/*<div style={{maxWidth: 300}} className="form-group">
         <label className="form-label">
           <span>From</span>
         </label>
         <AccountSelect submit={setAccount}/>
-      </div>
+</div>*/}
   <div style={{maxWidth: 300}} className="form-group">
         <label className="form-label">
             <span>Currency</span>
@@ -43,10 +43,10 @@ return (
     </div>
     <div className="form-group">
         <button
-         disabled={!account || !market ||!value || !address} 
+         disabled={!market ||!value || !address} 
         type="button"
         className="btn btn-primary"
-        onClick={()=>{}}
+        onClick={send}
         >Confirm</button>
     </div>
   </form>

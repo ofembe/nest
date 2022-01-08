@@ -7,7 +7,7 @@ import useEthereumAccounts from "../../hooks/useEthereumAccounts";
 const Transfer  = () => {
   const {web3, accounts, contract} = useEthereumAccounts();
 
-  const transfer = async (account, address, to, value) => {
+  const transfer = async (address, to, value) => {
     const amount = ((new BigNumber(10)).exponentiatedBy(address.decimals)).multipliedBy(value);
     try {
       await contract.methods.withdrawErc20Tokens(
