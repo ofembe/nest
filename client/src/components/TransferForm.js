@@ -17,31 +17,31 @@ export const TransferForm = ({onSubmit}) => {
 return (
   <div className="mt-2">
   <form>
-  <div class="form-group">
+  <div className="form-group">
       <label for="address" className="form-label">
         <span>To</span>
         </label>
-        <input id="address" class="form-control" style={{maxWidth: 300}} onChange={(e) => {setAddress(e.target.value)}} placeholder="Address" type="string"/>
+        <input id="address" className="form-control" style={{maxWidth: 300}} onChange={(e) => {setAddress(e.target.value)}} placeholder="Address" type="string"/>
     </div>
-  <div style={{maxWidth: 300}} class="form-group">
+  <div style={{maxWidth: 300}} className="form-group">
         <label className="form-label">
           <span>From</span>
         </label>
         <AccountSelect submit={setAccount}/>
       </div>
-  <div style={{maxWidth: 300}} class="form-group">
+  <div style={{maxWidth: 300}} className="form-group">
         <label className="form-label">
             <span>Currency</span>
           </label>
         <CurrencySelect submit={setMarket}/>
       </div>
-    <div class="form-group">
+    <div className="form-group">
       <label for="amount" className="form-label">
         <span>Amount</span>
         </label>
-        <input style={{maxWidth: 300}} id="amount" class="form-control" onChange={(e) => {setValue(e.target.value)}} placeholder="0.000" type="number"/>
+        <input style={{maxWidth: 300}} id="amount" className="form-control" onChange={(e) => {setValue(e.target.value)}} placeholder="0.000" type="number"/>
     </div>
-    <div class="form-group">
+    <div className="form-group">
         <button
          disabled={!account || !market ||!value || !address} 
         type="button"

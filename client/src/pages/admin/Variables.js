@@ -7,10 +7,11 @@ const Variables = () => {
   const {web3, accounts, contract} = useEthereumAccounts();
 
   const changeMarketPair = async (ercAddress, address) => {
+
     try {
         await contract
         .methods
-        .setMarketPair(ercAddress,address)
+        .setMarketPair(ercAddress, address)
         .send({from: accounts[0]});
         }catch(err) {
           console.log(err);

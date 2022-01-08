@@ -9,6 +9,8 @@ const Save  = () => {
     const {web3, accounts, contract} = useEthereumAccounts();
 
     const save = async (address, value) => {
+      console.log(address)
+      console.log(value)
       const amount = ((new BigNumber(10)).exponentiatedBy(address.decimals)).multipliedBy(value);
       // Approve ERC contract approval
       console.log(web3);
@@ -20,7 +22,6 @@ const Save  = () => {
       try {
           await contract.methods.depositErc20(
             address.ercAddress,
-            address.address, 
             amount.toFixed())
             .send({from: accounts[0]});
             console.log(address.name);

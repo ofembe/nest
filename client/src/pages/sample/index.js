@@ -1,49 +1,49 @@
 import React from "react";
 const Sample = () => {
-    return (<div class="nk-content-body">
-    <div class="nk-block-head nk-block-head-lg wide-xs mx-auto">
-        <div class="nk-block-head-content text-center">
-            <h2 class="nk-block-title fw-normal">Nice, Abu Bin Ishtiyak!</h2>
-            <div class="nk-block-des">
+    return (<div className="nk-content-body">
+    <div className="nk-block-head nk-block-head-lg wide-xs mx-auto">
+        <div className="nk-block-head-content text-center">
+            <h2 className="nk-block-title fw-normal">Nice, Abu Bin Ishtiyak!</h2>
+            <div className="nk-block-des">
                 <p>Welcome to our <strong>DashLite Crypto Dashboard</strong>. You are few steps away to complete your profile. These are required to buy and sell on our platform! Let’s start!</p>
             </div>
         </div>
     </div>
-    <div class="nk-block">
-        <div class="card card-custom-s1 card-bordered">
-            <div class="row no-gutters">
-                <div class="col-lg-4">
-                    <div class="card-inner-group h-100">
-                        <div class="card-inner">
+    <div className="nk-block">
+        <div className="card card-custom-s1 card-bordered">
+            <div className="row no-gutters">
+                <div className="col-lg-4">
+                    <div className="card-inner-group h-100">
+                        <div className="card-inner">
                             <h5>Let’s Finish Registration</h5>
                             <p>Only few minutes required to complete your registration and set up your account.</p>
                         </div>
-                        <div class="card-inner">
-                            <ul class="list list-step">
-                                <li class="list-step-done">Verify email address</li>
-                                <li class="list-step-current">Verify your identity (KYC)</li>
+                        <div className="card-inner">
+                            <ul className="list list-step">
+                                <li className="list-step-done">Verify email address</li>
+                                <li className="list-step-current">Verify your identity (KYC)</li>
                                 <li>Secure your account</li>
                                 <li>Set up payment method</li>
                             </ul>
                         </div>
-                        <div class="card-inner">
-                            <div class="align-center gx-3">
-                                <div class="flex-item">
-                                    <div class="progress progress-sm progress-pill w-80px">
-                                        <div class="progress-bar" data-progress="25"></div>
+                        <div className="card-inner">
+                            <div className="align-center gx-3">
+                                <div className="flex-item">
+                                    <div className="progress progress-sm progress-pill w-80px">
+                                        <div className="progress-bar" data-progress="25"></div>
                                     </div>
                                 </div>
-                                <div class="flex-item">
-                                    <span class="sub-text sub-text-sm text-soft">1/4 Completed</span>
+                                <div className="flex-item">
+                                    <span className="sub-text sub-text-sm text-soft">1/4 Completed</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8">
-                    <div class="card-inner card-inner-lg h-100">
-                        <div class="align-center flex-wrap flex-md-nowrap g-3 h-100">
-                            <div class="nk-block-image w-200px flex-shrink-0 order-first order-md-last">
+                <div className="col-lg-8">
+                    <div className="card-inner card-inner-lg h-100">
+                        <div className="align-center flex-wrap flex-md-nowrap g-3 h-100">
+                            <div className="nk-block-image w-200px flex-shrink-0 order-first order-md-last">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 113.9">
                                     <path d="M87.84,110.34l-48.31-7.86a3.55,3.55,0,0,1-3.1-4L48.63,29a3.66,3.66,0,0,1,4.29-2.8L101.24,34a3.56,3.56,0,0,1,3.09,4l-12.2,69.52A3.66,3.66,0,0,1,87.84,110.34Z" transform="translate(-4 -2.1)" fill="#c4cefe" />
                                     <path d="M33.73,105.39,78.66,98.1a3.41,3.41,0,0,0,2.84-3.94L69.4,25.05a3.5,3.5,0,0,0-4-2.82L20.44,29.51a3.41,3.41,0,0,0-2.84,3.94l12.1,69.11A3.52,3.52,0,0,0,33.73,105.39Z" transform="translate(-4 -2.1)" fill="#c4cefe" />
@@ -64,18 +64,18 @@ const Sample = () => {
                                     <path d="M100.66,12.81l-1.35,1.47c-1.9,2.06-3.88,4.21-5.77,6.3a1.29,1.29,0,0,1-1,.42h0a1.27,1.27,0,0,1-1-.42c-1.09-1.2-2.19-2.39-3.28-3.56a1.29,1.29,0,0,1,1.88-1.76c.78.84,1.57,1.68,2.35,2.54,1.6-1.76,3.25-3.55,4.83-5.27l1.35-1.46a1.29,1.29,0,0,1,1.9,1.74Z" transform="translate(-4 -2.1)" fill="#fff" />
                                 </svg>
                             </div>
-                            <div class="nk-block-content">
-                                <div class="nk-block-content-head">
+                            <div className="nk-block-content">
+                                <div className="nk-block-content-head">
                                     <h4>Complete Your KYC</h4>
-                                    <span class="sub-text sub-text-sm text-soft">7 minutes</span>
+                                    <span className="sub-text sub-text-sm text-soft">7 minutes</span>
                                 </div>
                                 <p>Looks like your have not verified your indentity yet. Please verify yourself to get full access to digital wallet.</p>
-                                <ul class="list list-sm list-checked">
+                                <ul className="list list-sm list-checked">
                                     <li>Fiat Currency Wallet <span>(USD, EUR, GBP)</span></li>
                                     <li>10+ Digital Crypto Wallet <span>(ETH, BTC, LTC etc)</span></li>
                                     <li>Receive and send payment with NioWallet</li>
                                 </ul>
-                                <a href="html/crypto/index.html" class="btn btn-lg btn-primary">Get Started</a>
+                                <a href="html/crypto/index.html" className="btn btn-lg btn-primary">Get Started</a>
                             </div>
                         </div>
                     </div>
@@ -83,11 +83,11 @@ const Sample = () => {
             </div>
         </div>
     </div>
-    <div class="nk-block">
-        <div class="card card-bordered">
-            <div class="card-inner card-inner-lg">
-                <div class="align-center flex-wrap flex-md-nowrap g-4">
-                    <div class="nk-block-image w-120px flex-shrink-0">
+    <div className="nk-block">
+        <div className="card card-bordered">
+            <div className="card-inner card-inner-lg">
+                <div className="align-center flex-wrap flex-md-nowrap g-4">
+                    <div className="nk-block-image w-120px flex-shrink-0">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 118">
                             <path d="M8.916,94.745C-.318,79.153-2.164,58.569,2.382,40.578,7.155,21.69,19.045,9.451,35.162,4.32,46.609.676,58.716.331,70.456,1.845,84.683,3.68,99.57,8.694,108.892,21.408c10.03,13.679,12.071,34.71,10.747,52.054-1.173,15.359-7.441,27.489-19.231,34.494-10.689,6.351-22.92,8.733-34.715,10.331-16.181,2.192-34.195-.336-47.6-12.281A47.243,47.243,0,0,1,8.916,94.745Z" transform="translate(0 -1)" fill="#f6faff" />
                             <rect x="18" y="32" width="84" height="50" rx="4" ry="4" fill="#fff" />
@@ -110,14 +110,14 @@ const Sample = () => {
                             <circle cx="24" cy="23" r="2.5" fill="none" stroke="#9cabff" stroke-miterlimit="10" />
                         </svg>
                     </div>
-                    <div class="nk-block-content">
-                        <div class="nk-block-content-head px-lg-4">
+                    <div className="nk-block-content">
+                        <div className="nk-block-content-head px-lg-4">
                             <h5>We’re here to help you!</h5>
-                            <p class="text-soft">Ask a question or file a support ticket, manage request, report an issues. Our team support team will get back to you by email.</p>
+                            <p className="text-soft">Ask a question or file a support ticket, manage request, report an issues. Our team support team will get back to you by email.</p>
                         </div>
                     </div>
-                    <div class="nk-block-content flex-shrink-0">
-                        <a href="#" class="btn btn-lg btn-outline-primary">Get Support Now</a>
+                    <div className="nk-block-content flex-shrink-0">
+                        <a href="#" className="btn btn-lg btn-outline-primary">Get Support Now</a>
                     </div>
                 </div>
             </div>

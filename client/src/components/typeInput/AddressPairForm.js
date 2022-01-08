@@ -11,14 +11,14 @@ export const AddressPairForm = ({onSubmit}) => {
     return (
       <div className="mt-2">
       <form>
-        <div class="form-group">
-          <input style={{maxWidth: 300}} id="amount" class="form-control" onChange={(e) => {setFirst(e.target.value)}} type="number"/>
+        <div className="form-group">
+          <input style={{maxWidth: 300}} className="form-control" onChange={(e) => {setFirst(e.target.value)}} type="string"/>
         </div>
-        <div class="form-group">
-          <input style={{maxWidth: 300}} id="amount" class="form-control" onChange={(e) => {setSecond(e.target.value)}} type="number"/>
+        <div className="form-group">
+          <input style={{maxWidth: 300}} className="form-control" onChange={(e) => {setSecond(e.target.value)}} type="string"/>
         </div>
-        <div class="form-group">
-            <button disabled={!first || !second} type="button" className="btn btn-primary" onClick={submit}>Confirm</button>
+        <div className="form-group">
+            <button type="button" className="btn btn-primary" onClick={submit}>Confirm</button>
         </div>
   </form>
   </div>)

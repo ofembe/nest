@@ -5,33 +5,33 @@ import useEthereumAccounts from "../hooks/useEthereumAccounts";
 const Layout = (props) => {
     const {web3, accounts, contract} = useEthereumAccounts();
     return (
- <div class="nk-body npc-crypto bg-white has-sidebar ">
- <div class="nk-app-root">
-     <div class="nk-main ">
+ <div className="nk-body npc-crypto bg-white has-sidebar ">
+ <div className="nk-app-root">
+     <div className="nk-main ">
          <Sidebar/>
-         <div class="nk-wrap ">
-             <div class="nk-header nk-header-fluid nk-header-fixed is-light">
-                 <div class="container-fluid">
-                     <div class="nk-header-wrap">
-                         <div class="nk-menu-trigger d-xl-none ml-n1">
-                             <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
+         <div className="nk-wrap ">
+             <div className="nk-header nk-header-fluid nk-header-fixed is-light">
+                 <div className="container-fluid">
+                     <div className="nk-header-wrap">
+                         <div className="nk-menu-trigger d-xl-none ml-n1">
+                             <a href="#" className="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em className="icon ni ni-menu"></em></a>
                          </div>
-                         <div class="nk-header-brand d-xl-none">
-                             <a href="html/crypto/index.html" class="logo-link">
-                                 <img class="logo-light logo-img" src="/images/logo.png" srcset="/images/logo.png" alt="logo"/>
-                                 <img class="logo-dark logo-img" src="/images/logo-dark.png" srcset="/images/logo-dark.png" alt="logo-dark"/>
-                                 <span class="nio-version">Crypto</span>
+                         <div className="nk-header-brand d-xl-none">
+                             <a href="html/crypto/index.html" className="logo-link">
+                                 <img className="logo-light logo-img" src="/images/logo.png" srcSet="/images/logo.png" alt="logo"/>
+                                 <img className="logo-dark logo-img" src="/images/logo-dark.png" srcSet="/images/logo-dark.png" alt="logo-dark"/>
+                                 <span className="nio-version">Crypto</span>
                              </a>
                          </div>
-                         <div class="nk-header-news d-none d-xl-block">
-                             <div class="nk-news-list">
-                                 <a class="nk-news-item" href="#">
-                                     <div class="nk-news-icon">
-                                         <em class="icon ni ni-card-view"></em>
+                         <div className="nk-header-news d-none d-xl-block">
+                             <div className="nk-news-list">
+                                 <a className="nk-news-item" href="#">
+                                     <div className="nk-news-icon">
+                                         <em className="icon ni ni-card-view"></em>
                                      </div>
-                                     <div class="nk-news-text">
+                                     <div className="nk-news-text">
                                          <p>Do you know the latest update of 2021? <span> A overview of our is now available on YouTube</span></p>
-                                         <em class="icon ni ni-external"></em>
+                                         <em className="icon ni ni-external"></em>
                                      </div>
                                  </a>
                              </div>
@@ -39,23 +39,23 @@ const Layout = (props) => {
                      </div>
                  </div>
              </div>
-             <div class="nk-content nk-content-fluid">
-                 <div class="container-xl wide-lg">
-                     <div class="nk-content-body">
+             <div className="nk-content nk-content-fluid">
+                 <div className="container-xl wide-lg">
+                     <div className="nk-content-body">
                       {props.children}
                      </div>
                  </div>
              </div>
-             <div class="nk-footer nk-footer-fluid">
-                 <div class="container-fluid">
-                     <div class="nk-footer-wrap">
-                         <div class="nk-footer-copyright"> &copy; 2021 Nest.
+             <div className="nk-footer nk-footer-fluid">
+                 <div className="container-fluid">
+                     <div className="nk-footer-wrap">
+                         <div className="nk-footer-copyright"> &copy; 2021 Nest.
                          </div>
-                         <div class="nk-footer-links">
-                             <ul class="nav nav-sm">
-                                 <li class="nav-item"><a class="nav-link" href="#">Terms</a></li>
-                                 <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
-                                 <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                         <div className="nk-footer-links">
+                             <ul className="nav nav-sm">
+                                 <li className="nav-item"><a className="nav-link" href="#">Terms</a></li>
+                                 <li className="nav-item"><a className="nav-link" href="#">Privacy</a></li>
+                                 <li className="nav-item"><a className="nav-link" href="#">Help</a></li>
                              </ul>
                          </div>
                      </div>
