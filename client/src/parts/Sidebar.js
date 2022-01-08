@@ -101,12 +101,12 @@ const Sidebar = () => {
                                     <span className="nk-menu-text">Save</span>
                                 </Link>
                         </li>
-                        <li className={`nk-menu-item ${location.pathname === '/investments'?"active": ""}`}>
+                        {/*<li className={`nk-menu-item ${location.pathname === '/investments'?"active": ""}`}>
                                 <Link to="/investments" className="nk-menu-link">
                                 <span className="nk-menu-icon"><em className="icon ni ni-swap-alt"></em></span>
                                     <span className="nk-menu-text">Invest</span>
                                 </Link>
-                        </li>
+                        </li>*/}
                         <li className={`nk-menu-item ${location.pathname === '/withdrawals'?"active": ""}`}>
                                 <Link to="/withdrawals" className="nk-menu-link">
                                 <span className="nk-menu-icon"><em className="icon ni ni-minus"></em></span>

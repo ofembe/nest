@@ -24,7 +24,7 @@ const App = () => {
           <Route path="transfers" element={<Transfer />} />
           <Route path="deposits" element={<Deposit />} />
           <Route path="withdrawals" element={<Withdraw />} />
-          <Route path="investments" element={<Invest />} />
+          {/*<Route path="investments" element={<Invest />} />*/}
           <Route exact path="admin" element={<Variables />} />
 
       </Routes>
