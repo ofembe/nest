@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import "./App.scss";
+import Variables from "./pages/admin/Variables";
 import Dashboard from "./pages/dashboard";
 import Invest from "./pages/invest/Invest";
 import Deposit from "./pages/invest/Save";
@@ -24,6 +25,8 @@ const App = () => {
           <Route path="deposits" element={<Deposit />} />
           <Route path="withdrawals" element={<Withdraw />} />
           <Route path="investments" element={<Invest />} />
+          <Route exact path="admin" element={<Variables />} />
+
       </Routes>
     </BrowserRouter>
     

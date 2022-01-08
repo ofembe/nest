@@ -232,6 +232,10 @@ contract NestDeposit is IRecursive {
         return true;
     }
 
+    function getMarketPair(address erc) public view returns (address) {
+        return marketPairs[erc];
+    }
+
     function setFeeRate(address erc, uint fee) external onlyOwner returns (bool) {
         feeRate[erc] = fee;
         return true;
