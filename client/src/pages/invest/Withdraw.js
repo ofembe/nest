@@ -8,7 +8,7 @@ import useEthereumAccounts from "../../hooks/useEthereumAccounts";
 const Withdraw = () => {
   const {web3, accounts, contract} = useEthereumAccounts();
 
-  const withdraw = async (account, address, value) => {
+  const withdraw = async (address, value) => {
     const amount = ((new BigNumber(10)).exponentiatedBy(address.decimals)).multipliedBy(value);
     try {
       await contract.methods.withdrawErc20Tokens(

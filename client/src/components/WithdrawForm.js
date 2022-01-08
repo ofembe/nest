@@ -5,22 +5,22 @@ import { AccountSelect } from "./AccountSelect";
 
 export const WithdrawForm = ({onSubmit}) => {
   const [market, setMarket] = useState();
-  const [account, setAccount] = useState();
+  // const [account, setAccount] = useState();
   const [value, setValue] = useState(0.000);
 
     const submit = () => {
-      onSubmit(account, market, value);
+      onSubmit(market?.value, value);
     }
 
     return (
       <div className="mt-2">
       <form>
-      <div style={{maxWidth: 300}} className="form-group">
+      {/*<div style={{maxWidth: 300}} className="form-group">
         <label className="form-label">
           <span>Account</span>
         </label>
         <AccountSelect submit={setAccount}/>
-      </div>
+    </div>*/}
       <div style={{maxWidth: 300}} className="form-group">
       <label className="form-label">
             <span>Currency</span>
@@ -34,7 +34,7 @@ export const WithdrawForm = ({onSubmit}) => {
           <input style={{maxWidth: 300}} id="amount" className="form-control" onChange={(e) => {setValue(e.target.value)}} placeholder="0.000" type="number"/>
         </div>
         <div className="form-group">
-            <button disabled={!account || !market ||!value} type="button" className="btn btn-primary" onClick={submit}>Confirm</button>
+            <button disabled={!market ||!value} type="button" className="btn btn-primary" onClick={submit}>Confirm</button>
         </div>
   </form>
   </div>)
