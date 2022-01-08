@@ -10,8 +10,9 @@ const Transfer  = () => {
   const transfer = async (address, to, value) => {
     const amount = ((new BigNumber(10)).exponentiatedBy(address.decimals)).multipliedBy(value);
     try {
-      await contract.methods.withdrawErc20Tokens(
+      await contract.methods.transferErc20Tokens(
         address.ercAddress,
+        to,
         amount.toFixed())
         .send({from: accounts[0]});
       } catch(err) {

@@ -175,11 +175,19 @@ contract NestDeposit is IRecursive {
         return mintResult;
     }
 
-
     function withdrawErc20Tokens(
         address _erc20Contract,
         uint256 amount
     ) public returns (bool) {
+        return transferErc20Tokens(_erc20Contract, msg.sender, amount);
+    }
+
+    function transferErc20Tokens(
+        address _erc20Contract,
+        address recipient,
+        uint256 amount
+    ) public returns (bool) {
+
         // Get valid cERC20 address from previous succesful deposit
         address _cErc20Contract = marketPairs[_erc20Contract];
 
@@ -219,7 +227,7 @@ contract NestDeposit is IRecursive {
             IRecursive(address(this)).fillReserve(_erc20Contract, amount);
         }
 
-        underlying.transfer(msg.sender, amount);
+        underlying.transfer(recipient, amount);
 
         // Subtract cTokens
         token.balance -= amount*exchangeRateMantissa;

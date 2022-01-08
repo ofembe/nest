@@ -9,7 +9,7 @@ export const TransferForm = ({onSubmit}) => {
     // const [account, setAccount] = useState("");
     
     const send = (e) => {
-        onSubmit(market, address, value);
+        onSubmit(market?.value, address, value);
         setValue(0);
     }
 
