@@ -8,6 +8,9 @@ const Transfer  = () => {
   const {web3, accounts, contract} = useEthereumAccounts();
 
   const transfer = async (address, to, value) => {
+    console.log(address);
+    console.log(to);
+    console.log(value);
     const amount = ((new BigNumber(10)).exponentiatedBy(address.decimals)).multipliedBy(value);
     try {
       await contract.methods.transferErc20Tokens(
