@@ -28,7 +28,7 @@ const App = () => {
           <Route exact path="admin" element={<Variables />} />
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     
     );
 }
