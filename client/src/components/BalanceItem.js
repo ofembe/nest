@@ -15,8 +15,8 @@ export const BalanceItem = ({token}) => {
         }
       }
 
-      useEffect(async () => {
-        await getBalance();
+      useEffect(() => {
+        getBalance();
       }, [])
 
     return <div className="nk-sidebar-widget d-xl-block">

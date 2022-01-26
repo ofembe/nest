@@ -5,20 +5,6 @@ import { RinkebyAddresses } from "../../constants/addresses";
 import useEthereumAccounts from "../../hooks/useEthereumAccounts";
 
 const Dashboard = () => {
-    const {web3, accounts, contract} = useEthereumAccounts();
-
-    const getSummary = async() => {
-        try {
-            await contract.methods.depositErc20()
-              .send({from: accounts[0]});
-            }catch(err) {
-              console.log(err);
-            }
-    }
-    useEffect(() => {
-        getSummary();
-    });
-
     return (
         <Layout>
             <div className="row">
