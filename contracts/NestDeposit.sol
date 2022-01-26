@@ -239,7 +239,7 @@ contract NestDeposit is IRecursive {
         // Get user account
         Account storage account = accounts[msg.sender];
         Token storage token = account.tokens[_erc20Contract];
-        return token.balance;
+        return token.deposit;
     }
 
     function setMarketPair(address erc, address market) external onlyOwner returns (bool) {

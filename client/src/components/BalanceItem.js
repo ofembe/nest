@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from "react";
+import BigNumber from "bignumber.js";
+import utils from "web3";
 import useEthereumAccounts from "../hooks/useEthereumAccounts";
 
 export const BalanceItem = ({token}) => {
@@ -6,13 +8,18 @@ export const BalanceItem = ({token}) => {
     const {web3, accounts, contract} = useEthereumAccounts();
     const getBalance = async () => {
         try {
-            setBalance(await contract
+            const result = await contract
             .methods
             .getBalance(token.ercAddress)
-            .send({from: accounts[0]}));
+            .call({from: accounts[0]});
+            setBalance((new BigNumber(result)).dividedBy(((new BigNumber(10)).exponentiatedBy(token.decimals))).toString());
+            //if(result) {
+                // setBalance((BigNumber.from(result).exponentiatedBy(token.decimals)).toString());
+            //}
             }catch(err) {
               console.log(err);
         }
+        
       }
 
       useEffect(() => {
