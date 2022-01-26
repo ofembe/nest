@@ -2,7 +2,8 @@ import React from "react";
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  HashRouter
 } from "react-router-dom";
 
 import "./App.scss";
@@ -16,8 +17,7 @@ import Transfer from "./pages/transfer";
 
 const App = () => {
     return (
-      
-      <BrowserRouter>
+      <HashRouter>
       <Routes>
           <Route path="/" element={<Dashboard />}/>
           <Route index element={<Dashboard />} />
@@ -28,7 +28,7 @@ const App = () => {
           <Route exact path="admin" element={<Variables />} />
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     
     );
 }
