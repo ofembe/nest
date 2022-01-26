@@ -7,7 +7,6 @@ const Variables = () => {
   const {web3, accounts, contract} = useEthereumAccounts();
 
   const changeMarketPair = async (ercAddress, address) => {
-
     try {
         await contract
         .methods

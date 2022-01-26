@@ -12,10 +12,10 @@ export const AddressPairForm = ({onSubmit}) => {
       <div className="mt-2">
       <form>
         <div className="form-group">
-          <input style={{maxWidth: 300}} className="form-control" onChange={(e) => {setFirst(e.target.value)}} type="string"/>
+          <input style={{maxWidth: 300}} placeholder="Erc" className="form-control" onChange={(e) => {setFirst(e.target.value)}} type="string"/>
         </div>
         <div className="form-group">
-          <input style={{maxWidth: 300}} className="form-control" onChange={(e) => {setSecond(e.target.value)}} type="string"/>
+          <input style={{maxWidth: 300}} placeholder="cErc" className="form-control" onChange={(e) => {setSecond(e.target.value)}} type="string"/>
         </div>
         <div className="form-group">
             <button type="button" className="btn btn-primary" onClick={submit}>Confirm</button>

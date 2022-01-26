@@ -24,7 +24,7 @@ const Dashboard = () => {
             <div className="row">
             { RinkebyAddresses.map((a) => {
             return <div className="col-xs-12 col-md-6">
-                <BalanceItem key={a.name}/>
+                <BalanceItem token={a} key={a.name}/>
                 </div>
             })
             }
